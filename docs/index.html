@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Danny Ponce">
+<meta name="author" content="Diego Villagomez">
+<meta name="dcterms.date" content="2026-11-27">
+
+<title>Proyecto del Primer Bimestre</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="proyecto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="proyecto_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="proyecto_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="proyecto_files/libs/quarto-html/popper.min.js"></script>
+<script src="proyecto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="proyecto_files/libs/quarto-html/anchor.min.js"></script>
+<link href="proyecto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="proyecto_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="proyecto_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="proyecto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="proyecto_files/libs/bootstrap/bootstrap-685e3e7f47893b8be5c05bf49aa1946c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="proyecto_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="proyecto_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link active" data-scroll-target="#introducción"><span class="header-section-number">1</span> Introducción</a></li>
+  <li><a href="#información-y-preparación" id="toc-información-y-preparación" class="nav-link" data-scroll-target="#información-y-preparación"><span class="header-section-number">2</span> Información y preparación</a>
+  <ul class="collapse">
+  <li><a href="#descripción-de-la-información" id="toc-descripción-de-la-información" class="nav-link" data-scroll-target="#descripción-de-la-información"><span class="header-section-number">2.1</span> Descripción de la información</a></li>
+  <li><a href="#carga-y-preparación-de-la-información" id="toc-carga-y-preparación-de-la-información" class="nav-link" data-scroll-target="#carga-y-preparación-de-la-información"><span class="header-section-number">2.2</span> Carga y preparación de la información</a></li>
+  </ul></li>
+  <li><a href="#análisis-de-estadístico" id="toc-análisis-de-estadístico" class="nav-link" data-scroll-target="#análisis-de-estadístico"><span class="header-section-number">3</span> Análisis de estadístico</a>
+  <ul class="collapse">
+  <li><a href="#pregunta-1-tipo-de-seguro-social-vs.-ingresos-y-horas-trabajadas" id="toc-pregunta-1-tipo-de-seguro-social-vs.-ingresos-y-horas-trabajadas" class="nav-link" data-scroll-target="#pregunta-1-tipo-de-seguro-social-vs.-ingresos-y-horas-trabajadas"><span class="header-section-number">3.1</span> Pregunta 1: Tipo de seguro social vs.&nbsp;Ingresos y horas trabajadas</a></li>
+  <li><a href="#pregunta-2-categoría-ocupacional-vs.-estabilidad-de-la-jornada-e-ingresos" id="toc-pregunta-2-categoría-ocupacional-vs.-estabilidad-de-la-jornada-e-ingresos" class="nav-link" data-scroll-target="#pregunta-2-categoría-ocupacional-vs.-estabilidad-de-la-jornada-e-ingresos"><span class="header-section-number">3.2</span> Pregunta 2: Categoría ocupacional vs.&nbsp;Estabilidad de la jornada e ingresos</a></li>
+  <li><a href="#pregunta-3-rol-en-el-hogar-parentesco-vs.-ingreso-laboral" id="toc-pregunta-3-rol-en-el-hogar-parentesco-vs.-ingreso-laboral" class="nav-link" data-scroll-target="#pregunta-3-rol-en-el-hogar-parentesco-vs.-ingreso-laboral"><span class="header-section-number">3.3</span> Pregunta 3: Rol en el hogar (parentesco) vs.&nbsp;Ingreso laboral</a></li>
+  </ul></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="header-section-number">4</span> Resultados</a>
+  <ul class="collapse">
+  <li><a href="#interpretación-de-los-hallazgos" id="toc-interpretación-de-los-hallazgos" class="nav-link" data-scroll-target="#interpretación-de-los-hallazgos"><span class="header-section-number">4.1</span> Interpretación de los hallazgos</a></li>
+  <li><a href="#referencias-bibliográficas" id="toc-referencias-bibliográficas" class="nav-link" data-scroll-target="#referencias-bibliográficas"><span class="header-section-number">4.2</span> Referencias bibliográficas</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Proyecto del Primer Bimestre</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<p class="subtitle lead">Grupo 1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Danny Ponce </p>
+             <p>Diego Villagomez </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!------------------------------------------------------------------------------------------------->
+<section id="introducción" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">1</span> Introducción</h2>
+<p>En la actualidad, entender la situación laboral y económica de un país no puede depender únicamente de percepciones generales; hace falta respaldarse en datos reales. Como parte del curso de Probabilidad y Estadística de la Escuela Politécnica Nacional (Ing. Sistemas de la Información, 2026-B), este proyecto busca poner en práctica los conceptos y herramientas vistos en clase para explorar y analizar información estadística vinculada directamente con la realidad nacional del Ecuador.</p>
+<p>Para este trabajo se utiliza la base de datos de la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), elaborada por el Instituto Nacional de Estadística y Censos (INEC), trabajando específicamente con la última entrega disponible correspondiente a diciembre de 2025. Esta encuesta recopila información detallada sobre las condiciones laborales, ingresos, horas de trabajo y características socioeconómicas de la población, lo que la convierte en una fuente ideal para aplicar técnicas de estadística descriptiva.</p>
+<p>A lo largo del reporte se realiza el procesamiento y análisis de esta información mediante el lenguaje de programación R, empleando medidas de tendencia central, medidas de dispersión de forma agrupada y representaciones gráficas. El objetivo principal es responder a tres preguntas estadísticas formuladas por el grupo —enfocadas en la relación entre el ingreso laboral, las horas trabajadas, la afiliación a la seguridad social, la categoría ocupacional y el parentesco en el hogar—, además de una pregunta adicional propuesta por el docente. De esta manera, se busca no solo calcular indicadores numéricos, sino interpretarlos con criterio para comprender mejor las dinámicas del mercado laboral ecuatoriano.</p>
+<!------------------------------------------------------------------------------------------------->
+</section>
+<section id="información-y-preparación" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="información-y-preparación"><span class="header-section-number">2</span> Información y preparación</h2>
+<section id="descripción-de-la-información" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="descripción-de-la-información"><span class="header-section-number">2.1</span> Descripción de la información</h3>
+<p><strong>Origen y propósito:</strong> Los datos provienen de la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), levantada y publicada por el Instituto Nacional de Estadística y Censos (INEC) del Ecuador. El propósito principal de esta encuesta es recopilar información oficial sobre la actividad económica, las condiciones laborales, los ingresos y las características demográficas de la población ecuatoriana, sirviendo como base para el análisis económico y la toma de decisiones públicas.</p>
+<p><strong>Periodicidad:</strong> La ENEMDU se ejecuta de manera continua con publicaciones mensuales (además de reportes acumulados trimestrales y anuales). Siguiendo los lineamientos del proyecto, no se analiza la serie histórica completa, sino únicamente el último corte disponible correspondiente a diciembre de 2025.</p>
+<p><strong>Dimensión de la base de datos:</strong> Aunque la encuesta incluye módulos de vivienda y consumidor, el análisis se centra en la base de personas (<code>enemdu_persona_2025_12.csv</code>), la cual cuenta con una dimensión de <strong>27,808 registros (filas)</strong>, donde cada registro corresponde a una persona encuestada, y <strong>144 variables (columnas)</strong> que abarcan datos demográficos, educativos y laborales.</p>
+<p><strong>Variables de estudio:</strong> Dado que se trata de una base de datos compuesta, se seleccionaron las variables clave necesarias para responder a las preguntas del grupo, clasificándolas según su naturaleza estadística:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Código</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Tipo de variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>p05a</code></td>
+<td style="text-align: left;">Tipo de seguro social al que está afiliado</td>
+<td style="text-align: left;">Cualitativa nominal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>p42</code></td>
+<td style="text-align: left;">Categoría de ocupación (público, privado, cuenta propia, etc.)</td>
+<td style="text-align: left;">Cualitativa nominal</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>p04</code></td>
+<td style="text-align: left;">Relación de parentesco con el jefe de hogar</td>
+<td style="text-align: left;">Cualitativa nominal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>ingrl</code></td>
+<td style="text-align: left;">Ingreso laboral mensual (en dólares)</td>
+<td style="text-align: left;">Cuantitativa continua</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>p24</code></td>
+<td style="text-align: left;">Horas trabajadas durante la semana anterior</td>
+<td style="text-align: left;">Cuantitativa discreta</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="carga-y-preparación-de-la-información" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="carga-y-preparación-de-la-información"><span class="header-section-number">2.2</span> Carga y preparación de la información</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-label="1"></a><span class="fu">library</span>( data.table )</span>
+<span id="cb1-2"><a href="#cb1-2" aria-label="2"></a><span class="fu">library</span>( ggplot2 )</span>
+<span id="cb1-3"><a href="#cb1-3" aria-label="3"></a><span class="fu">library</span>( kableExtra )</span>
+<span id="cb1-4"><a href="#cb1-4" aria-label="4"></a><span class="fu">library</span>( lubridate )</span>
+<span id="cb1-5"><a href="#cb1-5" aria-label="5"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-label="6"></a>file <span class="ot">&lt;-</span> <span class="st">'../Data/Bases_de_Datos_ENEMDU_diciembre_2025/2_BDD_DATOS_ABIERTOS_ENEMDU_2025_12_CSV/enemdu_persona_2025_12.csv'</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-label="7"></a>enemdu <span class="ot">&lt;-</span> <span class="fu">read.csv</span>( file, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">";"</span> )</span>
+<span id="cb1-8"><a href="#cb1-8" aria-label="8"></a>enemdu <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>( enemdu )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Para garantizar la validez de las medidas de tendencia central y dispersión, se filtran los registros correspondientes a personas con ingresos laborales reportados válidos (ingrl &gt; 0 &amp; ingrl &lt; 999999), eliminando así a la población sin ingresos laborales y los códigos especiales de «no informa» (999999) establecidos por el INEC. Asimismo, se asignan etiquetas descriptivas a los códigos numéricos de acuerdo con el diccionario de datos oficial.</p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-label="1"></a><span class="co"># Filtrado de registros válidos de ingreso laboral</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-label="2"></a>enemdu_clean <span class="ot">&lt;-</span> enemdu[ <span class="sc">!</span><span class="fu">is.na</span>(ingrl) <span class="sc">&amp;</span> ingrl <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> ingrl <span class="sc">&lt;</span> <span class="dv">999999</span> ]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-label="3"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-label="4"></a><span class="co"># Etiquetado de Seguro Social (p05a)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-label="5"></a>enemdu_clean[ , seguro_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-label="6"></a>  p05a <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"IESS Seguro General"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-label="7"></a>  p05a <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"IESS Seguro Voluntario"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-label="8"></a>  p05a <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"IESS Seguro Campesino"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-label="9"></a>  p05a <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"ISSFA / ISSPOL"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-label="10"></a>  p05a <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Seguro privado con hosp."</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-label="11"></a>  p05a <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Seguro privado sin hosp."</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-label="12"></a>  p05a <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"AUS"</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-label="13"></a>  p05a <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Seguros municipales/Consejos"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-label="14"></a>  p05a <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Seguro de vida"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-label="15"></a>  p05a <span class="sc">==</span> <span class="dv">10</span>, <span class="st">"Ninguno (Sin seguro)"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-label="16"></a>  <span class="at">default =</span> <span class="st">"No informa"</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-label="17"></a>) ]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-label="18"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-label="19"></a><span class="co"># Etiquetado de Categoría de Ocupación (p42)</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-label="20"></a>enemdu_clean[ , ocupacion_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb2-21"><a href="#cb2-21" aria-label="21"></a>  p42 <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Empleado/obrero público"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-label="22"></a>  p42 <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"Empleado/obrero privado"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-label="23"></a>  p42 <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"Empleado/obrero tercerizado"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-label="24"></a>  p42 <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"Jornalero o peón"</span>,</span>
+<span id="cb2-25"><a href="#cb2-25" aria-label="25"></a>  p42 <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Patrono"</span>,</span>
+<span id="cb2-26"><a href="#cb2-26" aria-label="26"></a>  p42 <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Cuenta propia"</span>,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-label="27"></a>  p42 <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"Trabajador hogar no remun."</span>,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-label="28"></a>  p42 <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Trabajador no remun. otro hogar"</span>,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-label="29"></a>  p42 <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Ayudante no remun. asalariado"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-label="30"></a>  p42 <span class="sc">==</span> <span class="dv">10</span>, <span class="st">"Empleado doméstico"</span>,</span>
+<span id="cb2-31"><a href="#cb2-31" aria-label="31"></a>  <span class="at">default =</span> <span class="st">"Otro / No informa"</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-label="32"></a>) ]</span>
+<span id="cb2-33"><a href="#cb2-33" aria-label="33"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-label="34"></a><span class="co"># Etiquetado de Parentesco (p04)</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-label="35"></a>enemdu_clean[ , parentesco_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb2-36"><a href="#cb2-36" aria-label="36"></a>  p04 <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Jefe de hogar"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-label="37"></a>  p04 <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"Cónyuge o conviviente"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-label="38"></a>  p04 <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"Hijo o hija"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-label="39"></a>  p04 <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"Yerno o nuera"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-label="40"></a>  p04 <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Nieto o nieta"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-label="41"></a>  p04 <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Padres o suegros"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-label="42"></a>  p04 <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"Otros parientes"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-label="43"></a>  p04 <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Empleado doméstico"</span>,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-label="44"></a>  p04 <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Otros no parientes"</span>,</span>
+<span id="cb2-45"><a href="#cb2-45" aria-label="45"></a>  <span class="at">default =</span> <span class="st">"Otro"</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-label="46"></a>) ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p>Tras la limpieza, la muestra efectiva de análisis cuenta con <strong>11,934</strong> trabajadores con ingresos laborales válidos. ### Propuesta de preguntas y relevancia</p>
+<p>Con el fin de explorar la situación laboral del país desde enfoques distintos a los análisis más habituales, el grupo formuló tres preguntas estadísticas enfocadas en variables socioeconómicas y laborales clave de la encuesta, a las que se suma una cuarta pregunta seleccionada de las propuestas por el docente:</p>
+<ol type="1">
+<li><strong>¿Cómo varían la tendencia central y la dispersión del ingreso laboral y de las horas trabajadas a la semana según el tipo de seguro social al que está afiliado el trabajador?</strong>
+<ul>
+<li><em>Relevancia:</em> En el Ecuador, la afiliación a la seguridad social es uno de los principales indicadores de formalidad laboral. Analizar los ingresos (<code>ingrl</code>) y la carga horaria (<code>p24</code>) según el tipo de seguro (<code>p05a</code>) permite comprobar si quienes carecen de afiliación o pertenecen a regímenes específicos no solo perciben menores ingresos, sino también si enfrentan jornadas menos estables o una mayor variabilidad en sus ganancias.</li>
+</ul></li>
+<li><strong>¿Qué diferencias existen en la distribución y dispersión de las horas trabajadas a la semana y del ingreso laboral según la categoría de ocupación?</strong>
+<ul>
+<li><em>Relevancia:</em> Comparar grupos como empleados públicos, empleados privados, trabajadores por cuenta propia y patronos (<code>p42</code>) ayuda a entender cómo cambia la estabilidad laboral según el tipo de vínculo de trabajo. Más allá de ver quién gana más en promedio, evaluar la dispersión de las horas trabajadas (<code>p24</code>) y de los ingresos (<code>ingrl</code>) permite identificar en qué sectores las jornadas son más regulares y en cuáles existe mayor incertidumbre económica.</li>
+</ul></li>
+<li><strong>¿Cómo se comportan el ingreso laboral promedio, la mediana y la dispersión según la relación de parentesco con el jefe de hogar?</strong>
+<ul>
+<li><em>Relevancia:</em> Esta pregunta aporta una mirada desde la estructura familiar (<code>p04</code>) para analizar cómo se distribuyen los ingresos laborales (<code>ingrl</code>) dentro de los hogares ecuatorianos. Además, resulta útil desde el punto de vista estadístico para comparar el comportamiento de la media frente a la mediana y observar si el sostén económico recae principalmente en el jefe de hogar o si existen diferencias marcadas con los ingresos de cónyuges, hijos u otros parientes.</li>
+</ul></li>
+<li><strong>[Colocar aquí la pregunta propuesta por el docente]</strong>
+<ul>
+<li><em>Relevancia:</em> [Colocar aquí la relevancia de la pregunta del docente].</li>
+</ul></li>
+</ol>
+<!------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="análisis-de-estadístico" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="análisis-de-estadístico"><span class="header-section-number">3</span> Análisis de estadístico</h2>
+<p>Para evaluar cada grupo analizado se calculan la media muestral (<span class="math inline">\(\overline{x}\)</span>), la mediana (<span class="math inline">\(Me\)</span>) y la desviación estándar muestral (<span class="math inline">\(s\)</span>):</p>
+<p><span class="math display">\[\overline{x} = \frac{1}{n} \sum\limits_{i=1}^n x_i \qquad \qquad s = \sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n (x_i - \overline{x})^2}\]</span></p>
+<section id="pregunta-1-tipo-de-seguro-social-vs.-ingresos-y-horas-trabajadas" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="pregunta-1-tipo-de-seguro-social-vs.-ingresos-y-horas-trabajadas"><span class="header-section-number">3.1</span> Pregunta 1: Tipo de seguro social vs.&nbsp;Ingresos y horas trabajadas</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-label="1"></a>tab_p1 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p05a), <span class="fu">list</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-label="2"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-label="3"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb3-4"><a href="#cb3-4" aria-label="4"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-label="5"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-label="6"></a>  <span class="at">EH =</span> <span class="fu">mean</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-label="7"></a>  <span class="at">SDH =</span> <span class="fu">sd</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-label="8"></a>  <span class="at">Hmed =</span> <span class="fu">median</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-label="9"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p05a, seguro_lbl ) ]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-label="10"></a><span class="fu">setorder</span>( tab_p1, <span class="sc">-</span>fn )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-label="1"></a>tab_p1[ , <span class="fu">list</span>( seguro_lbl, fn, EI, SDI, Imed, EH, SDH, Hmed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-label="2"></a>  <span class="fu">kable</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-label="3"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-label="4"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico de ingreso laboral (USD) y horas semanales según tipo de seguro social'</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-label="5"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-label="6"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-label="7"></a>      <span class="st">'Tipo de seguro social'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-label="8"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-label="9"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-label="10"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-label="11"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-label="12"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-label="13"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-label="14"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( H_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-label="15"></a>    <span class="at">align =</span> <span class="st">'lrrrrrrr'</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-label="16"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb4-17"><a href="#cb4-17" aria-label="17"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb4-18"><a href="#cb4-18" aria-label="18"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-label="19"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-label="20"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-label="21"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-label="22"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-label="23"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-label="24"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-label="25"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-label="26"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-label="27"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<table class="lightable-classic caption-top table">
+<caption>Resumen estadístico de ingreso laboral (USD) y horas semanales según tipo de seguro social</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Tipo de seguro social</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( n \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( E[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( SD[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( I_{med} \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( E[H] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( SD[H] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( H_{med} \)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ninguno (Sin seguro)</td>
+<td style="text-align: right;">6,856</td>
+<td style="text-align: right;">373.71</td>
+<td style="text-align: right;">316.07</td>
+<td style="text-align: right;">320.0</td>
+<td style="text-align: right;">34.83</td>
+<td style="text-align: right;">14.19</td>
+<td style="text-align: right;">40.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IESS Seguro General</td>
+<td style="text-align: right;">3,858</td>
+<td style="text-align: right;">979.96</td>
+<td style="text-align: right;">804.84</td>
+<td style="text-align: right;">710.0</td>
+<td style="text-align: right;">40.88</td>
+<td style="text-align: right;">8.54</td>
+<td style="text-align: right;">40.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">IESS Seguro Campesino</td>
+<td style="text-align: right;">522</td>
+<td style="text-align: right;">300.44</td>
+<td style="text-align: right;">830.57</td>
+<td style="text-align: right;">202.5</td>
+<td style="text-align: right;">30.48</td>
+<td style="text-align: right;">13.03</td>
+<td style="text-align: right;">30.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">IESS Seguro Voluntario</td>
+<td style="text-align: right;">504</td>
+<td style="text-align: right;">670.09</td>
+<td style="text-align: right;">691.91</td>
+<td style="text-align: right;">500.0</td>
+<td style="text-align: right;">38.85</td>
+<td style="text-align: right;">13.60</td>
+<td style="text-align: right;">40.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ISSFA / ISSPOL</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: right;">1,337.46</td>
+<td style="text-align: right;">1,009.00</td>
+<td style="text-align: right;">1,210.0</td>
+<td style="text-align: right;">40.80</td>
+<td style="text-align: right;">15.45</td>
+<td style="text-align: right;">40.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Seguro privado con hosp.</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">1,522.70</td>
+<td style="text-align: right;">2,104.43</td>
+<td style="text-align: right;">815.0</td>
+<td style="text-align: right;">38.35</td>
+<td style="text-align: right;">13.08</td>
+<td style="text-align: right;">40.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Seguro privado sin hosp.</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">885.83</td>
+<td style="text-align: right;">408.83</td>
+<td style="text-align: right;">800.0</td>
+<td style="text-align: right;">41.50</td>
+<td style="text-align: right;">12.10</td>
+<td style="text-align: right;">42.5</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-label="1"></a>top_seguros <span class="ot">&lt;-</span> tab_p1[ <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> ]<span class="sc">$</span>seguro_lbl</span>
+<span id="cb5-2"><a href="#cb5-2" aria-label="2"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-label="3"></a><span class="fu">ggplot</span>( enemdu_clean[ seguro_lbl <span class="sc">%in%</span> top_seguros <span class="sc">&amp;</span> ingrl <span class="sc">&lt;=</span> <span class="dv">3000</span> ], </span>
+<span id="cb5-4"><a href="#cb5-4" aria-label="4"></a>        <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( seguro_lbl, ingrl, <span class="at">FUN =</span> median ), <span class="at">y =</span> ingrl, <span class="at">fill =</span> seguro_lbl ) ) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-label="5"></a>  <span class="fu">geom_boxplot</span>( <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span> ) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-label="6"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-label="7"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Tipo de seguro social"</span>, <span class="at">y =</span> <span class="st">"Ingreso laboral mensual (USD)"</span> ) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-label="8"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Distribución del ingreso laboral según tipo de seguro social (top 5 categorías más frecuentes)</figcaption>
+<p><img src="proyecto_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="pregunta-2-categoría-ocupacional-vs.-estabilidad-de-la-jornada-e-ingresos" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="pregunta-2-categoría-ocupacional-vs.-estabilidad-de-la-jornada-e-ingresos"><span class="header-section-number">3.2</span> Pregunta 2: Categoría ocupacional vs.&nbsp;Estabilidad de la jornada e ingresos</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-label="1"></a>tab_p2 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p42), <span class="fu">list</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-label="2"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-label="3"></a>  <span class="at">EH =</span> <span class="fu">mean</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-label="4"></a>  <span class="at">SDH =</span> <span class="fu">sd</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-label="5"></a>  <span class="at">Hmed =</span> <span class="fu">median</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-label="6"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-label="7"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb6-8"><a href="#cb6-8" aria-label="8"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb6-9"><a href="#cb6-9" aria-label="9"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p42, ocupacion_lbl ) ]</span>
+<span id="cb6-10"><a href="#cb6-10" aria-label="10"></a><span class="fu">setorder</span>( tab_p2, <span class="sc">-</span>fn )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-label="1"></a>tab_p2[ , <span class="fu">list</span>( ocupacion_lbl, fn, EH, SDH, Hmed, EI, SDI, Imed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-label="2"></a>  <span class="fu">kable</span>(</span>
+<span id="cb7-3"><a href="#cb7-3" aria-label="3"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-label="4"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico de horas semanales e ingreso laboral (USD) según categoría ocupacional'</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-label="5"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-label="6"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb7-7"><a href="#cb7-7" aria-label="7"></a>      <span class="st">'Categoría ocupacional'</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-label="8"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-label="9"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-label="10"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-label="11"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( H_{med} </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-label="12"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-label="13"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-label="14"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb7-15"><a href="#cb7-15" aria-label="15"></a>    <span class="at">align =</span> <span class="st">'lrrrrrrr'</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-label="16"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-label="17"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb7-18"><a href="#cb7-18" aria-label="18"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-label="19"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-label="20"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-label="21"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb7-22"><a href="#cb7-22" aria-label="22"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-label="23"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-24"><a href="#cb7-24" aria-label="24"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb7-25"><a href="#cb7-25" aria-label="25"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb7-26"><a href="#cb7-26" aria-label="26"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-label="27"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<table class="lightable-classic caption-top table">
+<caption>Resumen estadístico de horas semanales e ingreso laboral (USD) según categoría ocupacional</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Categoría ocupacional</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( n \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( E[H] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( SD[H] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( H_{med} \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( E[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( SD[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( I_{med} \)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cuenta propia</td>
+<td style="text-align: right;">4,614</td>
+<td style="text-align: right;">33.65</td>
+<td style="text-align: right;">14.90</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">381.03</td>
+<td style="text-align: right;">482.91</td>
+<td style="text-align: right;">290</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Empleado/obrero privado</td>
+<td style="text-align: right;">4,030</td>
+<td style="text-align: right;">40.09</td>
+<td style="text-align: right;">10.98</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">616.74</td>
+<td style="text-align: right;">462.59</td>
+<td style="text-align: right;">520</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jornalero o peón</td>
+<td style="text-align: right;">1,279</td>
+<td style="text-align: right;">33.00</td>
+<td style="text-align: right;">11.73</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">332.14</td>
+<td style="text-align: right;">161.46</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Empleado/obrero público</td>
+<td style="text-align: right;">1,255</td>
+<td style="text-align: right;">41.40</td>
+<td style="text-align: right;">6.11</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">1,484.59</td>
+<td style="text-align: right;">931.20</td>
+<td style="text-align: right;">1,214</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Patrono</td>
+<td style="text-align: right;">365</td>
+<td style="text-align: right;">43.10</td>
+<td style="text-align: right;">12.58</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">1,197.11</td>
+<td style="text-align: right;">1,340.58</td>
+<td style="text-align: right;">830</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Empleado doméstico</td>
+<td style="text-align: right;">359</td>
+<td style="text-align: right;">32.53</td>
+<td style="text-align: right;">11.89</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">355.99</td>
+<td style="text-align: right;">178.77</td>
+<td style="text-align: right;">320</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trabajador hogar no remun.</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">42.81</td>
+<td style="text-align: right;">12.79</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">165.88</td>
+<td style="text-align: right;">192.22</td>
+<td style="text-align: right;">98</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-label="1"></a>top_ocup <span class="ot">&lt;-</span> tab_p2[ <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> ]<span class="sc">$</span>ocupacion_lbl</span>
+<span id="cb8-2"><a href="#cb8-2" aria-label="2"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-label="3"></a><span class="fu">ggplot</span>( enemdu_clean[ ocupacion_lbl <span class="sc">%in%</span> top_ocup ], </span>
+<span id="cb8-4"><a href="#cb8-4" aria-label="4"></a>        <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( ocupacion_lbl, p24, <span class="at">FUN =</span> median ), <span class="at">y =</span> p24, <span class="at">fill =</span> ocupacion_lbl ) ) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-label="5"></a>  <span class="fu">geom_boxplot</span>( <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span> ) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-label="6"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-label="7"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Categoría ocupacional"</span>, <span class="at">y =</span> <span class="st">"Horas trabajadas la semana anterior"</span> ) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-label="8"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Dispersión de horas trabajadas a la semana por categoría ocupacional (categorías principales)</figcaption>
+<p><img src="proyecto_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="pregunta-3-rol-en-el-hogar-parentesco-vs.-ingreso-laboral" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="pregunta-3-rol-en-el-hogar-parentesco-vs.-ingreso-laboral"><span class="header-section-number">3.3</span> Pregunta 3: Rol en el hogar (parentesco) vs.&nbsp;Ingreso laboral</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-label="1"></a>tab_p3 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p04), <span class="fu">list</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-label="2"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-label="3"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb9-4"><a href="#cb9-4" aria-label="4"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-label="5"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-label="6"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p04, parentesco_lbl ) ]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-label="7"></a><span class="fu">setorder</span>( tab_p3, <span class="sc">-</span>fn )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-label="1"></a>tab_p3[ , <span class="fu">list</span>( parentesco_lbl, fn, EI, SDI, Imed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-label="2"></a>  <span class="fu">kable</span>(</span>
+<span id="cb10-3"><a href="#cb10-3" aria-label="3"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-label="4"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico del ingreso laboral mensual (USD) según parentesco con el jefe de hogar'</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-label="5"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-label="6"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb10-7"><a href="#cb10-7" aria-label="7"></a>      <span class="st">'Parentesco con jefe de hogar'</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-label="8"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-label="9"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-label="10"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb10-11"><a href="#cb10-11" aria-label="11"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-label="12"></a>    <span class="at">align =</span> <span class="st">'lrrrr'</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-label="13"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb10-14"><a href="#cb10-14" aria-label="14"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-label="15"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb10-16"><a href="#cb10-16" aria-label="16"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-label="17"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-label="18"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb10-19"><a href="#cb10-19" aria-label="19"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-label="20"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb10-21"><a href="#cb10-21" aria-label="21"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-label="22"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb10-23"><a href="#cb10-23" aria-label="23"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb10-24"><a href="#cb10-24" aria-label="24"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<table class="lightable-classic caption-top table">
+<caption>Resumen estadístico del ingreso laboral mensual (USD) según parentesco con el jefe de hogar</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">Parentesco con jefe de hogar</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( n \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( E[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( SD[I] \)</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">\( I_{med} \)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Jefe de hogar</td>
+<td style="text-align: right;">6,265</td>
+<td style="text-align: right;">624.62</td>
+<td style="text-align: right;">723.13</td>
+<td style="text-align: right;">470</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hijo o hija</td>
+<td style="text-align: right;">2,742</td>
+<td style="text-align: right;">526.46</td>
+<td style="text-align: right;">450.04</td>
+<td style="text-align: right;">470</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cónyuge o conviviente</td>
+<td style="text-align: right;">1,982</td>
+<td style="text-align: right;">642.62</td>
+<td style="text-align: right;">765.57</td>
+<td style="text-align: right;">470</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Otros parientes</td>
+<td style="text-align: right;">377</td>
+<td style="text-align: right;">494.21</td>
+<td style="text-align: right;">409.88</td>
+<td style="text-align: right;">470</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Yerno o nuera</td>
+<td style="text-align: right;">223</td>
+<td style="text-align: right;">567.43</td>
+<td style="text-align: right;">396.04</td>
+<td style="text-align: right;">480</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nieto o nieta</td>
+<td style="text-align: right;">165</td>
+<td style="text-align: right;">401.92</td>
+<td style="text-align: right;">252.40</td>
+<td style="text-align: right;">400</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Otros no parientes</td>
+<td style="text-align: right;">109</td>
+<td style="text-align: right;">561.07</td>
+<td style="text-align: right;">508.85</td>
+<td style="text-align: right;">450</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Padres o suegros</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">409.98</td>
+<td style="text-align: right;">522.16</td>
+<td style="text-align: right;">300</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Empleado doméstico</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">526.00</td>
+<td style="text-align: right;">132.29</td>
+<td style="text-align: right;">470</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-label="1"></a>top_par <span class="ot">&lt;-</span> tab_p3[ <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> ]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-label="2"></a>tab_p3_long <span class="ot">&lt;-</span> <span class="fu">melt</span>( top_par, <span class="at">id.vars =</span> <span class="st">"parentesco_lbl"</span>, <span class="at">measure.vars =</span> <span class="fu">c</span>( <span class="st">"EI"</span>, <span class="st">"Imed"</span> ),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-label="3"></a>                     <span class="at">variable.name =</span> <span class="st">"Medida"</span>, <span class="at">value.name =</span> <span class="st">"Valor"</span> )</span>
+<span id="cb11-4"><a href="#cb11-4" aria-label="4"></a>tab_p3_long[ , Medida <span class="sc">:</span><span class="er">=</span> <span class="fu">fifelse</span>( Medida <span class="sc">==</span> <span class="st">"EI"</span>, <span class="st">"Media (Promedio)"</span>, <span class="st">"Mediana"</span> ) ]</span>
+<span id="cb11-5"><a href="#cb11-5" aria-label="5"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-label="6"></a><span class="fu">ggplot</span>( tab_p3_long, <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( parentesco_lbl, Valor ), <span class="at">y =</span> Valor, <span class="at">fill =</span> Medida ) ) <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-label="7"></a>  <span class="fu">geom_col</span>( <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">width =</span> <span class="fl">0.7</span> ) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-label="8"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-label="9"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Parentesco con el jefe de hogar"</span>, <span class="at">y =</span> <span class="st">"Ingreso laboral (USD)"</span>, <span class="at">fill =</span> <span class="st">"Estadístico"</span> ) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-label="10"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> ) <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-label="11"></a>  <span class="fu">theme</span>( <span class="at">legend.position =</span> <span class="st">"bottom"</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figcaption>Comparación entre media y mediana del ingreso laboral según parentesco (top 5 roles)</figcaption>
+<p><img src="proyecto_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<!------------------------------------------------------------------------------------------------->
+</section>
+</section>
+<section id="resultados" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="resultados"><span class="header-section-number">4</span> Resultados</h2>
+<section id="interpretación-de-los-hallazgos" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="interpretación-de-los-hallazgos"><span class="header-section-number">4.1</span> Interpretación de los hallazgos</h3>
+<ol type="1">
+<li><p><strong>Brecha salarial según afiliación a la seguridad social:</strong> Se evidencia una marcada diferencia entre el sector formal y el informal. Los trabajadores sin seguro social (<code>p05a = 10</code>) perciben un ingreso promedio de <strong>$373.71</strong> (mediana <strong>$320.00</strong>), valor inferior al salario básico unificado, mientras que los afiliados al IESS Seguro General (<code>p05a = 1</code>) alcanzan una media de <strong>$979.96</strong> (mediana <strong>$710.00</strong>), más del doble que el grupo sin afiliación. Asimismo, la alta desviación estándar en el IESS General refleja la presencia de remuneraciones altas que elevan la media por encima de la mediana.</p></li>
+<li><p><strong>Estabilidad horaria e ingresos por categoría ocupacional:</strong> Al evaluar la dispersión de la jornada semanal, los empleados públicos (<code>p42 = 1</code>) muestran la mayor regularidad contractual, concentrando su trabajo alrededor de las 40 horas semanales con una desviación estándar de apenas <strong>6.11 horas</strong>. Por el contrario, los trabajadores por cuenta propia (<code>p42 = 6</code>) registran la mayor inestabilidad horaria con una desviación estándar de <strong>14.90 horas</strong>, acompañada de un ingreso promedio considerablemente menor (<strong>$381.03</strong>).</p></li>
+<li><p><strong>Distribución del ingreso según el rol en el hogar:</strong> El análisis por parentesco permite contrastar la robustez de la mediana frente a la media ante valores extremos. Tanto jefes de hogar (<code>p04 = 1</code>), cónyuges (<code>p04 = 2</code>) e hijos (<code>p04 = 3</code>) comparten exactamente la misma mediana de <strong>$470.00</strong> (correspondiente al salario básico). Sin embargo, sus medias y dispersiones cambian notablemente: los cónyuges promedian <strong>$642.62</strong> con una desviación estándar de <strong>$765.57</strong>, frente a una media de **<span class="math inline">\(526.46** (\)</span>SD = $450.04$) en los hijos, reflejando una mayor dispersión salarial en los dos primeros roles familiares.</p></li>
+<li><p><strong>Resultados de la pregunta propuesta por el docente:</strong> [Redactar aquí la interpretación de la cuarta pregunta una vez procesada].</p></li>
+</ol>
+</section>
+<section id="referencias-bibliográficas" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="referencias-bibliográficas"><span class="header-section-number">4.2</span> Referencias bibliográficas</h3>
+<ul>
+<li>Instituto Nacional de Estadística y Censos (INEC). (2025). <em>Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) - Diciembre 2025. Base de datos de personas y diccionario de variables</em>. Quito, Ecuador: INEC. https://www.ecuadorencifras.gob.ec/</li>
+<li>Escuela Politécnica Nacional (EPN). (2026). <em>Guía del Proyecto Integrador y material de clase de Probabilidad y Estadística (Periodo 2026-B)</em>. Quito, Ecuador.</li>
+</ul>
+<!-- -->
+
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-label="1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-label="2"></a><span class="an">title:</span><span class="co"> "Proyecto del Primer Bimestre"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-label="3"></a><span class="an">subtitle:</span><span class="co"> "Grupo 1"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-label="4"></a><span class="an">author:</span><span class="co"> </span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-label="5"></a><span class="co">  - "Danny Ponce"</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-label="6"></a><span class="co">  - "Diego Villagomez"</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-label="7"></a><span class="an">date:</span><span class="co"> "2026-11-27"</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-label="8"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-label="9"></a><span class="co">  html:</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-label="10"></a><span class="co">    theme: default</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-label="11"></a><span class="co">    fontsize: 12pt</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-label="12"></a><span class="co">    css: style.css</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-label="13"></a><span class="co">    toc: true</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-label="14"></a><span class="co">    toc-depth: 3</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-label="15"></a><span class="co">    toc-location: left</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-label="16"></a><span class="co">    number-sections: true </span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-label="17"></a><span class="co">    linestretch: 1.5</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-label="18"></a><span class="co">    fig-cap-location: top</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-label="19"></a><span class="co">    tbl-cap-location: top</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-label="20"></a><span class="co">    html-math-method: mathjax</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-label="21"></a><span class="co">    code-link: false</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-label="22"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-label="23"></a><span class="co">    code-tools: true</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-label="24"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-label="25"></a><span class="co">    code-copy: true</span></span>
+<span id="cb12-26"><a href="#cb12-26" aria-label="26"></a><span class="co">    code-fold: show</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-label="27"></a><span class="co">    grid: </span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-label="28"></a><span class="co">      sidebar-width: 300px</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-label="29"></a><span class="co">      body-width: 1250px</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-label="30"></a><span class="co">      margin-width: 300px</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-label="31"></a><span class="co">---</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-label="32"></a></span>
+<span id="cb12-33"><a href="#cb12-33" aria-label="33"></a><span class="co">&lt;!-------------------------------------------------------------------------------------------------&gt;</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-label="34"></a><span class="fu">## Introducción </span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-label="35"></a></span>
+<span id="cb12-36"><a href="#cb12-36" aria-label="36"></a>En la actualidad, entender la situación laboral y económica de un país no puede depender únicamente de percepciones generales; hace falta respaldarse en datos reales. Como parte del curso de Probabilidad y Estadística de la Escuela Politécnica Nacional (Ing. Sistemas de la Información, 2026-B), este proyecto busca poner en práctica los conceptos y herramientas vistos en clase para explorar y analizar información estadística vinculada directamente con la realidad nacional del Ecuador.</span>
+<span id="cb12-37"><a href="#cb12-37" aria-label="37"></a></span>
+<span id="cb12-38"><a href="#cb12-38" aria-label="38"></a>Para este trabajo se utiliza la base de datos de la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), elaborada por el Instituto Nacional de Estadística y Censos (INEC), trabajando específicamente con la última entrega disponible correspondiente a diciembre de 2025. Esta encuesta recopila información detallada sobre las condiciones laborales, ingresos, horas de trabajo y características socioeconómicas de la población, lo que la convierte en una fuente ideal para aplicar técnicas de estadística descriptiva.</span>
+<span id="cb12-39"><a href="#cb12-39" aria-label="39"></a></span>
+<span id="cb12-40"><a href="#cb12-40" aria-label="40"></a>A lo largo del reporte se realiza el procesamiento y análisis de esta información mediante el lenguaje de programación R, empleando medidas de tendencia central, medidas de dispersión de forma agrupada y representaciones gráficas. El objetivo principal es responder a tres preguntas estadísticas formuladas por el grupo —enfocadas en la relación entre el ingreso laboral, las horas trabajadas, la afiliación a la seguridad social, la categoría ocupacional y el parentesco en el hogar—, además de una pregunta adicional propuesta por el docente. De esta manera, se busca no solo calcular indicadores numéricos, sino interpretarlos con criterio para comprender mejor las dinámicas del mercado laboral ecuatoriano.</span>
+<span id="cb12-41"><a href="#cb12-41" aria-label="41"></a></span>
+<span id="cb12-42"><a href="#cb12-42" aria-label="42"></a><span class="co">&lt;!-------------------------------------------------------------------------------------------------&gt;</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-label="43"></a><span class="fu">## Información y preparación</span></span>
+<span id="cb12-44"><a href="#cb12-44" aria-label="44"></a></span>
+<span id="cb12-45"><a href="#cb12-45" aria-label="45"></a><span class="fu">### Descripción de la información</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-label="46"></a></span>
+<span id="cb12-47"><a href="#cb12-47" aria-label="47"></a>**Origen y propósito:** Los datos provienen de la Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU), levantada y publicada por el Instituto Nacional de Estadística y Censos (INEC) del Ecuador. El propósito principal de esta encuesta es recopilar información oficial sobre la actividad económica, las condiciones laborales, los ingresos y las características demográficas de la población ecuatoriana, sirviendo como base para el análisis económico y la toma de decisiones públicas.</span>
+<span id="cb12-48"><a href="#cb12-48" aria-label="48"></a></span>
+<span id="cb12-49"><a href="#cb12-49" aria-label="49"></a>**Periodicidad:** La ENEMDU se ejecuta de manera continua con publicaciones mensuales (además de reportes acumulados trimestrales y anuales). Siguiendo los lineamientos del proyecto, no se analiza la serie histórica completa, sino únicamente el último corte disponible correspondiente a diciembre de 2025.</span>
+<span id="cb12-50"><a href="#cb12-50" aria-label="50"></a></span>
+<span id="cb12-51"><a href="#cb12-51" aria-label="51"></a>**Dimensión de la base de datos:** Aunque la encuesta incluye módulos de vivienda y consumidor, el análisis se centra en la base de personas (`enemdu_persona_2025_12.csv`), la cual cuenta con una dimensión de **27,808 registros (filas)**, donde cada registro corresponde a una persona encuestada, y **144 variables (columnas)** que abarcan datos demográficos, educativos y laborales.</span>
+<span id="cb12-52"><a href="#cb12-52" aria-label="52"></a></span>
+<span id="cb12-53"><a href="#cb12-53" aria-label="53"></a>**Variables de estudio:** Dado que se trata de una base de datos compuesta, se seleccionaron las variables clave necesarias para responder a las preguntas del grupo, clasificándolas según su naturaleza estadística:</span>
+<span id="cb12-54"><a href="#cb12-54" aria-label="54"></a></span>
+<span id="cb12-55"><a href="#cb12-55" aria-label="55"></a><span class="pp">|</span> Código <span class="pp">|</span> Descripción <span class="pp">|</span> Tipo de variable <span class="pp">|</span></span>
+<span id="cb12-56"><a href="#cb12-56" aria-label="56"></a><span class="pp">|:---|:---|:---|</span></span>
+<span id="cb12-57"><a href="#cb12-57" aria-label="57"></a><span class="pp">|</span> <span class="in">`p05a`</span> <span class="pp">|</span> Tipo de seguro social al que está afiliado <span class="pp">|</span> Cualitativa nominal <span class="pp">|</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-label="58"></a><span class="pp">|</span> <span class="in">`p42`</span> <span class="pp">|</span> Categoría de ocupación (público, privado, cuenta propia, etc.) <span class="pp">|</span> Cualitativa nominal <span class="pp">|</span></span>
+<span id="cb12-59"><a href="#cb12-59" aria-label="59"></a><span class="pp">|</span> <span class="in">`p04`</span> <span class="pp">|</span> Relación de parentesco con el jefe de hogar <span class="pp">|</span> Cualitativa nominal <span class="pp">|</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-label="60"></a><span class="pp">|</span> <span class="in">`ingrl`</span> <span class="pp">|</span> Ingreso laboral mensual (en dólares) <span class="pp">|</span> Cuantitativa continua <span class="pp">|</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-label="61"></a><span class="pp">|</span> <span class="in">`p24`</span> <span class="pp">|</span> Horas trabajadas durante la semana anterior <span class="pp">|</span> Cuantitativa discreta <span class="pp">|</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-label="62"></a></span>
+<span id="cb12-63"><a href="#cb12-63" aria-label="63"></a><span class="fu">### Carga y preparación de la información</span></span>
+<span id="cb12-64"><a href="#cb12-64" aria-label="64"></a></span>
+<span id="cb12-67"><a href="#cb12-67" aria-label="65"></a><span class="in">```{r}</span></span>
+<span id="cb12-68"><a href="#cb12-68" aria-label="66"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-69"><a href="#cb12-69" aria-label="67"></a><span class="co">#| message: false</span></span>
+<span id="cb12-70"><a href="#cb12-70" aria-label="68"></a><span class="fu">library</span>( data.table )</span>
+<span id="cb12-71"><a href="#cb12-71" aria-label="69"></a><span class="fu">library</span>( ggplot2 )</span>
+<span id="cb12-72"><a href="#cb12-72" aria-label="70"></a><span class="fu">library</span>( kableExtra )</span>
+<span id="cb12-73"><a href="#cb12-73" aria-label="71"></a><span class="fu">library</span>( lubridate )</span>
+<span id="cb12-74"><a href="#cb12-74" aria-label="72"></a></span>
+<span id="cb12-75"><a href="#cb12-75" aria-label="73"></a>file <span class="ot">&lt;-</span> <span class="st">'../Data/Bases_de_Datos_ENEMDU_diciembre_2025/2_BDD_DATOS_ABIERTOS_ENEMDU_2025_12_CSV/enemdu_persona_2025_12.csv'</span></span>
+<span id="cb12-76"><a href="#cb12-76" aria-label="74"></a>enemdu <span class="ot">&lt;-</span> <span class="fu">read.csv</span>( file, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">";"</span> )</span>
+<span id="cb12-77"><a href="#cb12-77" aria-label="75"></a>enemdu <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>( enemdu )</span>
+<span id="cb12-78"><a href="#cb12-78" aria-label="76"></a><span class="in">```</span></span>
+<span id="cb12-79"><a href="#cb12-79" aria-label="77"></a></span>
+<span id="cb12-80"><a href="#cb12-80" aria-label="78"></a>Para garantizar la validez de las medidas de tendencia central y dispersión, se filtran los registros correspondientes a personas con ingresos laborales reportados válidos (ingrl &gt; 0 &amp; ingrl &lt; 999999), eliminando así a la población sin ingresos laborales y los códigos especiales de «no informa» (999999) establecidos por el INEC. Asimismo, se asignan etiquetas descriptivas a los códigos numéricos de acuerdo con el diccionario de datos oficial.</span>
+<span id="cb12-81"><a href="#cb12-81" aria-label="79"></a></span>
+<span id="cb12-84"><a href="#cb12-84" aria-label="80"></a><span class="in">```{r}</span></span>
+<span id="cb12-85"><a href="#cb12-85" aria-label="81"></a><span class="co"># Filtrado de registros válidos de ingreso laboral</span></span>
+<span id="cb12-86"><a href="#cb12-86" aria-label="82"></a>enemdu_clean <span class="ot">&lt;-</span> enemdu[ <span class="sc">!</span><span class="fu">is.na</span>(ingrl) <span class="sc">&amp;</span> ingrl <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> ingrl <span class="sc">&lt;</span> <span class="dv">999999</span> ]</span>
+<span id="cb12-87"><a href="#cb12-87" aria-label="83"></a></span>
+<span id="cb12-88"><a href="#cb12-88" aria-label="84"></a><span class="co"># Etiquetado de Seguro Social (p05a)</span></span>
+<span id="cb12-89"><a href="#cb12-89" aria-label="85"></a>enemdu_clean[ , seguro_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb12-90"><a href="#cb12-90" aria-label="86"></a>  p05a <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"IESS Seguro General"</span>,</span>
+<span id="cb12-91"><a href="#cb12-91" aria-label="87"></a>  p05a <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"IESS Seguro Voluntario"</span>,</span>
+<span id="cb12-92"><a href="#cb12-92" aria-label="88"></a>  p05a <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"IESS Seguro Campesino"</span>,</span>
+<span id="cb12-93"><a href="#cb12-93" aria-label="89"></a>  p05a <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"ISSFA / ISSPOL"</span>,</span>
+<span id="cb12-94"><a href="#cb12-94" aria-label="90"></a>  p05a <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Seguro privado con hosp."</span>,</span>
+<span id="cb12-95"><a href="#cb12-95" aria-label="91"></a>  p05a <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Seguro privado sin hosp."</span>,</span>
+<span id="cb12-96"><a href="#cb12-96" aria-label="92"></a>  p05a <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"AUS"</span>,</span>
+<span id="cb12-97"><a href="#cb12-97" aria-label="93"></a>  p05a <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Seguros municipales/Consejos"</span>,</span>
+<span id="cb12-98"><a href="#cb12-98" aria-label="94"></a>  p05a <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Seguro de vida"</span>,</span>
+<span id="cb12-99"><a href="#cb12-99" aria-label="95"></a>  p05a <span class="sc">==</span> <span class="dv">10</span>, <span class="st">"Ninguno (Sin seguro)"</span>,</span>
+<span id="cb12-100"><a href="#cb12-100" aria-label="96"></a>  <span class="at">default =</span> <span class="st">"No informa"</span></span>
+<span id="cb12-101"><a href="#cb12-101" aria-label="97"></a>) ]</span>
+<span id="cb12-102"><a href="#cb12-102" aria-label="98"></a></span>
+<span id="cb12-103"><a href="#cb12-103" aria-label="99"></a><span class="co"># Etiquetado de Categoría de Ocupación (p42)</span></span>
+<span id="cb12-104"><a href="#cb12-104" aria-label="100"></a>enemdu_clean[ , ocupacion_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb12-105"><a href="#cb12-105" aria-label="101"></a>  p42 <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Empleado/obrero público"</span>,</span>
+<span id="cb12-106"><a href="#cb12-106" aria-label="102"></a>  p42 <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"Empleado/obrero privado"</span>,</span>
+<span id="cb12-107"><a href="#cb12-107" aria-label="103"></a>  p42 <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"Empleado/obrero tercerizado"</span>,</span>
+<span id="cb12-108"><a href="#cb12-108" aria-label="104"></a>  p42 <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"Jornalero o peón"</span>,</span>
+<span id="cb12-109"><a href="#cb12-109" aria-label="105"></a>  p42 <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Patrono"</span>,</span>
+<span id="cb12-110"><a href="#cb12-110" aria-label="106"></a>  p42 <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Cuenta propia"</span>,</span>
+<span id="cb12-111"><a href="#cb12-111" aria-label="107"></a>  p42 <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"Trabajador hogar no remun."</span>,</span>
+<span id="cb12-112"><a href="#cb12-112" aria-label="108"></a>  p42 <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Trabajador no remun. otro hogar"</span>,</span>
+<span id="cb12-113"><a href="#cb12-113" aria-label="109"></a>  p42 <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Ayudante no remun. asalariado"</span>,</span>
+<span id="cb12-114"><a href="#cb12-114" aria-label="110"></a>  p42 <span class="sc">==</span> <span class="dv">10</span>, <span class="st">"Empleado doméstico"</span>,</span>
+<span id="cb12-115"><a href="#cb12-115" aria-label="111"></a>  <span class="at">default =</span> <span class="st">"Otro / No informa"</span></span>
+<span id="cb12-116"><a href="#cb12-116" aria-label="112"></a>) ]</span>
+<span id="cb12-117"><a href="#cb12-117" aria-label="113"></a></span>
+<span id="cb12-118"><a href="#cb12-118" aria-label="114"></a><span class="co"># Etiquetado de Parentesco (p04)</span></span>
+<span id="cb12-119"><a href="#cb12-119" aria-label="115"></a>enemdu_clean[ , parentesco_lbl <span class="sc">:</span><span class="er">=</span> <span class="fu">fcase</span>(</span>
+<span id="cb12-120"><a href="#cb12-120" aria-label="116"></a>  p04 <span class="sc">==</span> <span class="dv">1</span>, <span class="st">"Jefe de hogar"</span>,</span>
+<span id="cb12-121"><a href="#cb12-121" aria-label="117"></a>  p04 <span class="sc">==</span> <span class="dv">2</span>, <span class="st">"Cónyuge o conviviente"</span>,</span>
+<span id="cb12-122"><a href="#cb12-122" aria-label="118"></a>  p04 <span class="sc">==</span> <span class="dv">3</span>, <span class="st">"Hijo o hija"</span>,</span>
+<span id="cb12-123"><a href="#cb12-123" aria-label="119"></a>  p04 <span class="sc">==</span> <span class="dv">4</span>, <span class="st">"Yerno o nuera"</span>,</span>
+<span id="cb12-124"><a href="#cb12-124" aria-label="120"></a>  p04 <span class="sc">==</span> <span class="dv">5</span>, <span class="st">"Nieto o nieta"</span>,</span>
+<span id="cb12-125"><a href="#cb12-125" aria-label="121"></a>  p04 <span class="sc">==</span> <span class="dv">6</span>, <span class="st">"Padres o suegros"</span>,</span>
+<span id="cb12-126"><a href="#cb12-126" aria-label="122"></a>  p04 <span class="sc">==</span> <span class="dv">7</span>, <span class="st">"Otros parientes"</span>,</span>
+<span id="cb12-127"><a href="#cb12-127" aria-label="123"></a>  p04 <span class="sc">==</span> <span class="dv">8</span>, <span class="st">"Empleado doméstico"</span>,</span>
+<span id="cb12-128"><a href="#cb12-128" aria-label="124"></a>  p04 <span class="sc">==</span> <span class="dv">9</span>, <span class="st">"Otros no parientes"</span>,</span>
+<span id="cb12-129"><a href="#cb12-129" aria-label="125"></a>  <span class="at">default =</span> <span class="st">"Otro"</span></span>
+<span id="cb12-130"><a href="#cb12-130" aria-label="126"></a>) ]</span>
+<span id="cb12-131"><a href="#cb12-131" aria-label="127"></a><span class="in">```</span></span>
+<span id="cb12-132"><a href="#cb12-132" aria-label="128"></a></span>
+<span id="cb12-133"><a href="#cb12-133" aria-label="129"></a>Tras la limpieza, la muestra efectiva de análisis cuenta con **`r format(nrow(enemdu_clean), big.mark = ",")`** trabajadores con ingresos laborales válidos.</span>
+<span id="cb12-134"><a href="#cb12-134" aria-label="130"></a><span class="fu">### Propuesta de preguntas y relevancia</span></span>
+<span id="cb12-135"><a href="#cb12-135" aria-label="131"></a></span>
+<span id="cb12-136"><a href="#cb12-136" aria-label="132"></a>Con el fin de explorar la situación laboral del país desde enfoques distintos a los análisis más habituales, el grupo formuló tres preguntas estadísticas enfocadas en variables socioeconómicas y laborales clave de la encuesta, a las que se suma una cuarta pregunta seleccionada de las propuestas por el docente:</span>
+<span id="cb12-137"><a href="#cb12-137" aria-label="133"></a></span>
+<span id="cb12-138"><a href="#cb12-138" aria-label="134"></a><span class="ss">1. </span>**¿Cómo varían la tendencia central y la dispersión del ingreso laboral y de las horas trabajadas a la semana según el tipo de seguro social al que está afiliado el trabajador?**</span>
+<span id="cb12-139"><a href="#cb12-139" aria-label="135"></a><span class="ss">   * </span>*Relevancia:* En el Ecuador, la afiliación a la seguridad social es uno de los principales indicadores de formalidad laboral. Analizar los ingresos (<span class="in">`ingrl`</span>) y la carga horaria (<span class="in">`p24`</span>) según el tipo de seguro (<span class="in">`p05a`</span>) permite comprobar si quienes carecen de afiliación o pertenecen a regímenes específicos no solo perciben menores ingresos, sino también si enfrentan jornadas menos estables o una mayor variabilidad en sus ganancias.</span>
+<span id="cb12-140"><a href="#cb12-140" aria-label="136"></a></span>
+<span id="cb12-141"><a href="#cb12-141" aria-label="137"></a><span class="ss">2. </span>**¿Qué diferencias existen en la distribución y dispersión de las horas trabajadas a la semana y del ingreso laboral según la categoría de ocupación?**</span>
+<span id="cb12-142"><a href="#cb12-142" aria-label="138"></a><span class="ss">   * </span>*Relevancia:* Comparar grupos como empleados públicos, empleados privados, trabajadores por cuenta propia y patronos (<span class="in">`p42`</span>) ayuda a entender cómo cambia la estabilidad laboral según el tipo de vínculo de trabajo. Más allá de ver quién gana más en promedio, evaluar la dispersión de las horas trabajadas (<span class="in">`p24`</span>) y de los ingresos (<span class="in">`ingrl`</span>) permite identificar en qué sectores las jornadas son más regulares y en cuáles existe mayor incertidumbre económica.</span>
+<span id="cb12-143"><a href="#cb12-143" aria-label="139"></a></span>
+<span id="cb12-144"><a href="#cb12-144" aria-label="140"></a><span class="ss">3. </span>**¿Cómo se comportan el ingreso laboral promedio, la mediana y la dispersión según la relación de parentesco con el jefe de hogar?**</span>
+<span id="cb12-145"><a href="#cb12-145" aria-label="141"></a><span class="ss">   * </span>*Relevancia:* Esta pregunta aporta una mirada desde la estructura familiar (<span class="in">`p04`</span>) para analizar cómo se distribuyen los ingresos laborales (<span class="in">`ingrl`</span>) dentro de los hogares ecuatorianos. Además, resulta útil desde el punto de vista estadístico para comparar el comportamiento de la media frente a la mediana y observar si el sostén económico recae principalmente en el jefe de hogar o si existen diferencias marcadas con los ingresos de cónyuges, hijos u otros parientes.</span>
+<span id="cb12-146"><a href="#cb12-146" aria-label="142"></a></span>
+<span id="cb12-147"><a href="#cb12-147" aria-label="143"></a><span class="ss">4. </span>**[Colocar aquí la pregunta propuesta por el docente]**</span>
+<span id="cb12-148"><a href="#cb12-148" aria-label="144"></a><span class="ss">   * </span>*Relevancia:* <span class="co">[</span><span class="ot">Colocar aquí la relevancia de la pregunta del docente</span><span class="co">]</span>.</span>
+<span id="cb12-149"><a href="#cb12-149" aria-label="145"></a>   </span>
+<span id="cb12-150"><a href="#cb12-150" aria-label="146"></a><span class="co">&lt;!-------------------------------------------------------------------------------------------------&gt;</span></span>
+<span id="cb12-151"><a href="#cb12-151" aria-label="147"></a><span class="fu">## Análisis de estadístico</span></span>
+<span id="cb12-152"><a href="#cb12-152" aria-label="148"></a></span>
+<span id="cb12-153"><a href="#cb12-153" aria-label="149"></a>Para evaluar cada grupo analizado se calculan la media muestral ($\overline{x}$), la mediana ($Me$) y la desviación estándar muestral ($s$):</span>
+<span id="cb12-154"><a href="#cb12-154" aria-label="150"></a></span>
+<span id="cb12-155"><a href="#cb12-155" aria-label="151"></a>$$\overline{x} = \frac{1}{n} \sum\limits_{i=1}^n x_i \qquad \qquad s = \sqrt{\frac{1}{n-1} \sum\limits_{i=1}^n (x_i - \overline{x})^2}$$</span>
+<span id="cb12-156"><a href="#cb12-156" aria-label="152"></a></span>
+<span id="cb12-157"><a href="#cb12-157" aria-label="153"></a><span class="fu">### Pregunta 1: Tipo de seguro social vs. Ingresos y horas trabajadas</span></span>
+<span id="cb12-158"><a href="#cb12-158" aria-label="154"></a></span>
+<span id="cb12-161"><a href="#cb12-161" aria-label="155"></a><span class="in">```{r}</span></span>
+<span id="cb12-162"><a href="#cb12-162" aria-label="156"></a>tab_p1 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p05a), <span class="fu">list</span>(</span>
+<span id="cb12-163"><a href="#cb12-163" aria-label="157"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb12-164"><a href="#cb12-164" aria-label="158"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-165"><a href="#cb12-165" aria-label="159"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-166"><a href="#cb12-166" aria-label="160"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-167"><a href="#cb12-167" aria-label="161"></a>  <span class="at">EH =</span> <span class="fu">mean</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-168"><a href="#cb12-168" aria-label="162"></a>  <span class="at">SDH =</span> <span class="fu">sd</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-169"><a href="#cb12-169" aria-label="163"></a>  <span class="at">Hmed =</span> <span class="fu">median</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb12-170"><a href="#cb12-170" aria-label="164"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p05a, seguro_lbl ) ]</span>
+<span id="cb12-171"><a href="#cb12-171" aria-label="165"></a><span class="fu">setorder</span>( tab_p1, <span class="sc">-</span>fn )</span>
+<span id="cb12-172"><a href="#cb12-172" aria-label="166"></a><span class="in">```</span></span>
+<span id="cb12-173"><a href="#cb12-173" aria-label="167"></a></span>
+<span id="cb12-176"><a href="#cb12-176" aria-label="168"></a><span class="in">```{r}</span></span>
+<span id="cb12-177"><a href="#cb12-177" aria-label="169"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-178"><a href="#cb12-178" aria-label="170"></a><span class="co">#| results: asis</span></span>
+<span id="cb12-179"><a href="#cb12-179" aria-label="171"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-180"><a href="#cb12-180" aria-label="172"></a>tab_p1[ , <span class="fu">list</span>( seguro_lbl, fn, EI, SDI, Imed, EH, SDH, Hmed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb12-181"><a href="#cb12-181" aria-label="173"></a>  <span class="fu">kable</span>(</span>
+<span id="cb12-182"><a href="#cb12-182" aria-label="174"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb12-183"><a href="#cb12-183" aria-label="175"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico de ingreso laboral (USD) y horas semanales según tipo de seguro social'</span>,</span>
+<span id="cb12-184"><a href="#cb12-184" aria-label="176"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-185"><a href="#cb12-185" aria-label="177"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb12-186"><a href="#cb12-186" aria-label="178"></a>      <span class="st">'Tipo de seguro social'</span>,</span>
+<span id="cb12-187"><a href="#cb12-187" aria-label="179"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-188"><a href="#cb12-188" aria-label="180"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-189"><a href="#cb12-189" aria-label="181"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-190"><a href="#cb12-190" aria-label="182"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-191"><a href="#cb12-191" aria-label="183"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-192"><a href="#cb12-192" aria-label="184"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-193"><a href="#cb12-193" aria-label="185"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( H_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb12-194"><a href="#cb12-194" aria-label="186"></a>    <span class="at">align =</span> <span class="st">'lrrrrrrr'</span>,</span>
+<span id="cb12-195"><a href="#cb12-195" aria-label="187"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb12-196"><a href="#cb12-196" aria-label="188"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb12-197"><a href="#cb12-197" aria-label="189"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-198"><a href="#cb12-198" aria-label="190"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-199"><a href="#cb12-199" aria-label="191"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb12-200"><a href="#cb12-200" aria-label="192"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb12-201"><a href="#cb12-201" aria-label="193"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-202"><a href="#cb12-202" aria-label="194"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-203"><a href="#cb12-203" aria-label="195"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb12-204"><a href="#cb12-204" aria-label="196"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb12-205"><a href="#cb12-205" aria-label="197"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb12-206"><a href="#cb12-206" aria-label="198"></a>  )</span>
+<span id="cb12-207"><a href="#cb12-207" aria-label="199"></a><span class="in">```</span></span>
+<span id="cb12-208"><a href="#cb12-208" aria-label="200"></a></span>
+<span id="cb12-211"><a href="#cb12-211" aria-label="201"></a><span class="in">```{r}</span></span>
+<span id="cb12-212"><a href="#cb12-212" aria-label="202"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-213"><a href="#cb12-213" aria-label="203"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-214"><a href="#cb12-214" aria-label="204"></a><span class="co">#| fig-cap: "Distribución del ingreso laboral según tipo de seguro social (top 5 categorías más frecuentes)"</span></span>
+<span id="cb12-215"><a href="#cb12-215" aria-label="205"></a>top_seguros <span class="ot">&lt;-</span> tab_p1[ <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> ]<span class="sc">$</span>seguro_lbl</span>
+<span id="cb12-216"><a href="#cb12-216" aria-label="206"></a></span>
+<span id="cb12-217"><a href="#cb12-217" aria-label="207"></a><span class="fu">ggplot</span>( enemdu_clean[ seguro_lbl <span class="sc">%in%</span> top_seguros <span class="sc">&amp;</span> ingrl <span class="sc">&lt;=</span> <span class="dv">3000</span> ], </span>
+<span id="cb12-218"><a href="#cb12-218" aria-label="208"></a>        <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( seguro_lbl, ingrl, <span class="at">FUN =</span> median ), <span class="at">y =</span> ingrl, <span class="at">fill =</span> seguro_lbl ) ) <span class="sc">+</span></span>
+<span id="cb12-219"><a href="#cb12-219" aria-label="209"></a>  <span class="fu">geom_boxplot</span>( <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span> ) <span class="sc">+</span></span>
+<span id="cb12-220"><a href="#cb12-220" aria-label="210"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb12-221"><a href="#cb12-221" aria-label="211"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Tipo de seguro social"</span>, <span class="at">y =</span> <span class="st">"Ingreso laboral mensual (USD)"</span> ) <span class="sc">+</span></span>
+<span id="cb12-222"><a href="#cb12-222" aria-label="212"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> )</span>
+<span id="cb12-223"><a href="#cb12-223" aria-label="213"></a><span class="in">```</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-label="214"></a></span>
+<span id="cb12-225"><a href="#cb12-225" aria-label="215"></a><span class="fu">### Pregunta 2: Categoría ocupacional vs. Estabilidad de la jornada e ingresos</span></span>
+<span id="cb12-226"><a href="#cb12-226" aria-label="216"></a></span>
+<span id="cb12-229"><a href="#cb12-229" aria-label="217"></a><span class="in">```{r}</span></span>
+<span id="cb12-230"><a href="#cb12-230" aria-label="218"></a>tab_p2 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p42), <span class="fu">list</span>(</span>
+<span id="cb12-231"><a href="#cb12-231" aria-label="219"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb12-232"><a href="#cb12-232" aria-label="220"></a>  <span class="at">EH =</span> <span class="fu">mean</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-233"><a href="#cb12-233" aria-label="221"></a>  <span class="at">SDH =</span> <span class="fu">sd</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-234"><a href="#cb12-234" aria-label="222"></a>  <span class="at">Hmed =</span> <span class="fu">median</span>( p24, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-235"><a href="#cb12-235" aria-label="223"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-236"><a href="#cb12-236" aria-label="224"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-237"><a href="#cb12-237" aria-label="225"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb12-238"><a href="#cb12-238" aria-label="226"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p42, ocupacion_lbl ) ]</span>
+<span id="cb12-239"><a href="#cb12-239" aria-label="227"></a><span class="fu">setorder</span>( tab_p2, <span class="sc">-</span>fn )</span>
+<span id="cb12-240"><a href="#cb12-240" aria-label="228"></a><span class="in">```</span></span>
+<span id="cb12-241"><a href="#cb12-241" aria-label="229"></a></span>
+<span id="cb12-244"><a href="#cb12-244" aria-label="230"></a><span class="in">```{r}</span></span>
+<span id="cb12-245"><a href="#cb12-245" aria-label="231"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-246"><a href="#cb12-246" aria-label="232"></a><span class="co">#| results: asis</span></span>
+<span id="cb12-247"><a href="#cb12-247" aria-label="233"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-248"><a href="#cb12-248" aria-label="234"></a>tab_p2[ , <span class="fu">list</span>( ocupacion_lbl, fn, EH, SDH, Hmed, EI, SDI, Imed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb12-249"><a href="#cb12-249" aria-label="235"></a>  <span class="fu">kable</span>(</span>
+<span id="cb12-250"><a href="#cb12-250" aria-label="236"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb12-251"><a href="#cb12-251" aria-label="237"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico de horas semanales e ingreso laboral (USD) según categoría ocupacional'</span>,</span>
+<span id="cb12-252"><a href="#cb12-252" aria-label="238"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-253"><a href="#cb12-253" aria-label="239"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb12-254"><a href="#cb12-254" aria-label="240"></a>      <span class="st">'Categoría ocupacional'</span>,</span>
+<span id="cb12-255"><a href="#cb12-255" aria-label="241"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-256"><a href="#cb12-256" aria-label="242"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-257"><a href="#cb12-257" aria-label="243"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[H] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-258"><a href="#cb12-258" aria-label="244"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( H_{med} </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-259"><a href="#cb12-259" aria-label="245"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-260"><a href="#cb12-260" aria-label="246"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-261"><a href="#cb12-261" aria-label="247"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb12-262"><a href="#cb12-262" aria-label="248"></a>    <span class="at">align =</span> <span class="st">'lrrrrrrr'</span>,</span>
+<span id="cb12-263"><a href="#cb12-263" aria-label="249"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb12-264"><a href="#cb12-264" aria-label="250"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb12-265"><a href="#cb12-265" aria-label="251"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-266"><a href="#cb12-266" aria-label="252"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-267"><a href="#cb12-267" aria-label="253"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb12-268"><a href="#cb12-268" aria-label="254"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb12-269"><a href="#cb12-269" aria-label="255"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-270"><a href="#cb12-270" aria-label="256"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-271"><a href="#cb12-271" aria-label="257"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb12-272"><a href="#cb12-272" aria-label="258"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb12-273"><a href="#cb12-273" aria-label="259"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb12-274"><a href="#cb12-274" aria-label="260"></a>  )</span>
+<span id="cb12-275"><a href="#cb12-275" aria-label="261"></a><span class="in">```</span></span>
+<span id="cb12-276"><a href="#cb12-276" aria-label="262"></a></span>
+<span id="cb12-279"><a href="#cb12-279" aria-label="263"></a><span class="in">```{r}</span></span>
+<span id="cb12-280"><a href="#cb12-280" aria-label="264"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-281"><a href="#cb12-281" aria-label="265"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-282"><a href="#cb12-282" aria-label="266"></a><span class="co">#| fig-cap: "Dispersión de horas trabajadas a la semana por categoría ocupacional (categorías principales)"</span></span>
+<span id="cb12-283"><a href="#cb12-283" aria-label="267"></a>top_ocup <span class="ot">&lt;-</span> tab_p2[ <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> ]<span class="sc">$</span>ocupacion_lbl</span>
+<span id="cb12-284"><a href="#cb12-284" aria-label="268"></a></span>
+<span id="cb12-285"><a href="#cb12-285" aria-label="269"></a><span class="fu">ggplot</span>( enemdu_clean[ ocupacion_lbl <span class="sc">%in%</span> top_ocup ], </span>
+<span id="cb12-286"><a href="#cb12-286" aria-label="270"></a>        <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( ocupacion_lbl, p24, <span class="at">FUN =</span> median ), <span class="at">y =</span> p24, <span class="at">fill =</span> ocupacion_lbl ) ) <span class="sc">+</span></span>
+<span id="cb12-287"><a href="#cb12-287" aria-label="271"></a>  <span class="fu">geom_boxplot</span>( <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">outlier.alpha =</span> <span class="fl">0.2</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span> ) <span class="sc">+</span></span>
+<span id="cb12-288"><a href="#cb12-288" aria-label="272"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb12-289"><a href="#cb12-289" aria-label="273"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Categoría ocupacional"</span>, <span class="at">y =</span> <span class="st">"Horas trabajadas la semana anterior"</span> ) <span class="sc">+</span></span>
+<span id="cb12-290"><a href="#cb12-290" aria-label="274"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> )</span>
+<span id="cb12-291"><a href="#cb12-291" aria-label="275"></a><span class="in">```</span></span>
+<span id="cb12-292"><a href="#cb12-292" aria-label="276"></a></span>
+<span id="cb12-293"><a href="#cb12-293" aria-label="277"></a><span class="fu">### Pregunta 3: Rol en el hogar (parentesco) vs. Ingreso laboral</span></span>
+<span id="cb12-294"><a href="#cb12-294" aria-label="278"></a></span>
+<span id="cb12-297"><a href="#cb12-297" aria-label="279"></a><span class="in">```{r}</span></span>
+<span id="cb12-298"><a href="#cb12-298" aria-label="280"></a>tab_p3 <span class="ot">&lt;-</span> enemdu_clean[ <span class="sc">!</span><span class="fu">is.na</span>(p04), <span class="fu">list</span>(</span>
+<span id="cb12-299"><a href="#cb12-299" aria-label="281"></a>  <span class="at">fn =</span> .N,</span>
+<span id="cb12-300"><a href="#cb12-300" aria-label="282"></a>  <span class="at">EI =</span> <span class="fu">mean</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-301"><a href="#cb12-301" aria-label="283"></a>  <span class="at">SDI =</span> <span class="fu">sd</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ),</span>
+<span id="cb12-302"><a href="#cb12-302" aria-label="284"></a>  <span class="at">Imed =</span> <span class="fu">median</span>( ingrl, <span class="at">na.rm =</span> <span class="cn">TRUE</span> ) ),</span>
+<span id="cb12-303"><a href="#cb12-303" aria-label="285"></a>  by <span class="ot">=</span> <span class="fu">list</span>( p04, parentesco_lbl ) ]</span>
+<span id="cb12-304"><a href="#cb12-304" aria-label="286"></a><span class="fu">setorder</span>( tab_p3, <span class="sc">-</span>fn )</span>
+<span id="cb12-305"><a href="#cb12-305" aria-label="287"></a><span class="in">```</span></span>
+<span id="cb12-306"><a href="#cb12-306" aria-label="288"></a></span>
+<span id="cb12-309"><a href="#cb12-309" aria-label="289"></a><span class="in">```{r}</span></span>
+<span id="cb12-310"><a href="#cb12-310" aria-label="290"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-311"><a href="#cb12-311" aria-label="291"></a><span class="co">#| results: asis</span></span>
+<span id="cb12-312"><a href="#cb12-312" aria-label="292"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-313"><a href="#cb12-313" aria-label="293"></a>tab_p3[ , <span class="fu">list</span>( parentesco_lbl, fn, EI, SDI, Imed ) ] <span class="sc">%&gt;%</span></span>
+<span id="cb12-314"><a href="#cb12-314" aria-label="294"></a>  <span class="fu">kable</span>(</span>
+<span id="cb12-315"><a href="#cb12-315" aria-label="295"></a>    <span class="at">label =</span> <span class="cn">NA</span>,</span>
+<span id="cb12-316"><a href="#cb12-316" aria-label="296"></a>    <span class="at">caption =</span> <span class="st">'Resumen estadístico del ingreso laboral mensual (USD) según parentesco con el jefe de hogar'</span>,</span>
+<span id="cb12-317"><a href="#cb12-317" aria-label="297"></a>    <span class="at">row.names =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-318"><a href="#cb12-318" aria-label="298"></a>    <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb12-319"><a href="#cb12-319" aria-label="299"></a>      <span class="st">'Parentesco con jefe de hogar'</span>,</span>
+<span id="cb12-320"><a href="#cb12-320" aria-label="300"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( n </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-321"><a href="#cb12-321" aria-label="301"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( E[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-322"><a href="#cb12-322" aria-label="302"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( SD[I] </span><span class="sc">\\</span><span class="st">)'</span>,</span>
+<span id="cb12-323"><a href="#cb12-323" aria-label="303"></a>      <span class="st">'</span><span class="sc">\\</span><span class="st">( I_{med} </span><span class="sc">\\</span><span class="st">)'</span> ),</span>
+<span id="cb12-324"><a href="#cb12-324" aria-label="304"></a>    <span class="at">align =</span> <span class="st">'lrrrr'</span>,</span>
+<span id="cb12-325"><a href="#cb12-325" aria-label="305"></a>    <span class="at">digits =</span> <span class="fu">c</span>( <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span> ),</span>
+<span id="cb12-326"><a href="#cb12-326" aria-label="306"></a>    <span class="at">format.args =</span> <span class="fu">list</span>( <span class="at">big.mark =</span> <span class="st">','</span>, <span class="at">decimal.mark =</span> <span class="st">'.'</span>, <span class="at">scientific =</span> <span class="cn">FALSE</span> ),</span>
+<span id="cb12-327"><a href="#cb12-327" aria-label="307"></a>    <span class="at">escape =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-328"><a href="#cb12-328" aria-label="308"></a>    <span class="at">centering =</span> <span class="cn">TRUE</span></span>
+<span id="cb12-329"><a href="#cb12-329" aria-label="309"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb12-330"><a href="#cb12-330" aria-label="310"></a>  <span class="fu">kable_classic</span>(</span>
+<span id="cb12-331"><a href="#cb12-331" aria-label="311"></a>    <span class="at">full_width =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb12-332"><a href="#cb12-332" aria-label="312"></a>    <span class="at">fixed_thead =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb12-333"><a href="#cb12-333" aria-label="313"></a>    <span class="at">html_font =</span> <span class="st">"Computer Modern"</span>,</span>
+<span id="cb12-334"><a href="#cb12-334" aria-label="314"></a>    <span class="at">position =</span> <span class="st">'center'</span>,</span>
+<span id="cb12-335"><a href="#cb12-335" aria-label="315"></a>    <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">'hold_position'</span>, <span class="st">'repeat_header'</span>, <span class="st">'scale_down'</span>)</span>
+<span id="cb12-336"><a href="#cb12-336" aria-label="316"></a>  )</span>
+<span id="cb12-337"><a href="#cb12-337" aria-label="317"></a><span class="in">```</span></span>
+<span id="cb12-338"><a href="#cb12-338" aria-label="318"></a></span>
+<span id="cb12-341"><a href="#cb12-341" aria-label="319"></a><span class="in">```{r}</span></span>
+<span id="cb12-342"><a href="#cb12-342" aria-label="320"></a><span class="co">#| echo: true</span></span>
+<span id="cb12-343"><a href="#cb12-343" aria-label="321"></a><span class="co">#| code-fold: true</span></span>
+<span id="cb12-344"><a href="#cb12-344" aria-label="322"></a><span class="co">#| fig-cap: "Comparación entre media y mediana del ingreso laboral según parentesco (top 5 roles)"</span></span>
+<span id="cb12-345"><a href="#cb12-345" aria-label="323"></a>top_par <span class="ot">&lt;-</span> tab_p3[ <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> ]</span>
+<span id="cb12-346"><a href="#cb12-346" aria-label="324"></a>tab_p3_long <span class="ot">&lt;-</span> <span class="fu">melt</span>( top_par, <span class="at">id.vars =</span> <span class="st">"parentesco_lbl"</span>, <span class="at">measure.vars =</span> <span class="fu">c</span>( <span class="st">"EI"</span>, <span class="st">"Imed"</span> ),</span>
+<span id="cb12-347"><a href="#cb12-347" aria-label="325"></a>                     <span class="at">variable.name =</span> <span class="st">"Medida"</span>, <span class="at">value.name =</span> <span class="st">"Valor"</span> )</span>
+<span id="cb12-348"><a href="#cb12-348" aria-label="326"></a>tab_p3_long[ , Medida <span class="sc">:</span><span class="er">=</span> <span class="fu">fifelse</span>( Medida <span class="sc">==</span> <span class="st">"EI"</span>, <span class="st">"Media (Promedio)"</span>, <span class="st">"Mediana"</span> ) ]</span>
+<span id="cb12-349"><a href="#cb12-349" aria-label="327"></a></span>
+<span id="cb12-350"><a href="#cb12-350" aria-label="328"></a><span class="fu">ggplot</span>( tab_p3_long, <span class="fu">aes</span>( <span class="at">x =</span> <span class="fu">reorder</span>( parentesco_lbl, Valor ), <span class="at">y =</span> Valor, <span class="at">fill =</span> Medida ) ) <span class="sc">+</span></span>
+<span id="cb12-351"><a href="#cb12-351" aria-label="329"></a>  <span class="fu">geom_col</span>( <span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">width =</span> <span class="fl">0.7</span> ) <span class="sc">+</span></span>
+<span id="cb12-352"><a href="#cb12-352" aria-label="330"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb12-353"><a href="#cb12-353" aria-label="331"></a>  <span class="fu">labs</span>( <span class="at">x =</span> <span class="st">"Parentesco con el jefe de hogar"</span>, <span class="at">y =</span> <span class="st">"Ingreso laboral (USD)"</span>, <span class="at">fill =</span> <span class="st">"Estadístico"</span> ) <span class="sc">+</span></span>
+<span id="cb12-354"><a href="#cb12-354" aria-label="332"></a>  <span class="fu">theme_minimal</span>( <span class="at">base_size =</span> <span class="dv">11</span> ) <span class="sc">+</span></span>
+<span id="cb12-355"><a href="#cb12-355" aria-label="333"></a>  <span class="fu">theme</span>( <span class="at">legend.position =</span> <span class="st">"bottom"</span> )</span>
+<span id="cb12-356"><a href="#cb12-356" aria-label="334"></a><span class="in">```</span></span>
+<span id="cb12-357"><a href="#cb12-357" aria-label="335"></a></span>
+<span id="cb12-358"><a href="#cb12-358" aria-label="336"></a><span class="co">&lt;!-------------------------------------------------------------------------------------------------&gt;</span></span>
+<span id="cb12-359"><a href="#cb12-359" aria-label="337"></a><span class="fu">## Resultados</span></span>
+<span id="cb12-360"><a href="#cb12-360" aria-label="338"></a></span>
+<span id="cb12-363"><a href="#cb12-363" aria-label="339"></a><span class="in">```{r}</span></span>
+<span id="cb12-364"><a href="#cb12-364" aria-label="340"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-365"><a href="#cb12-365" aria-label="341"></a><span class="co"># Variables en línea para citar automáticamente en los resultados</span></span>
+<span id="cb12-366"><a href="#cb12-366" aria-label="342"></a>ing_sin_seg <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p1[ p05a <span class="sc">==</span> <span class="dv">10</span> ]<span class="sc">$</span>EI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-367"><a href="#cb12-367" aria-label="343"></a>med_sin_seg <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p1[ p05a <span class="sc">==</span> <span class="dv">10</span> ]<span class="sc">$</span>Imed, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-368"><a href="#cb12-368" aria-label="344"></a>ing_iess    <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p1[ p05a <span class="sc">==</span> <span class="dv">1</span> ]<span class="sc">$</span>EI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-369"><a href="#cb12-369" aria-label="345"></a>med_iess    <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p1[ p05a <span class="sc">==</span> <span class="dv">1</span> ]<span class="sc">$</span>Imed, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-370"><a href="#cb12-370" aria-label="346"></a></span>
+<span id="cb12-371"><a href="#cb12-371" aria-label="347"></a>sd_hrs_pub  <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p2[ p42 <span class="sc">==</span> <span class="dv">1</span> ]<span class="sc">$</span>SDH, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-372"><a href="#cb12-372" aria-label="348"></a>sd_hrs_cp   <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p2[ p42 <span class="sc">==</span> <span class="dv">6</span> ]<span class="sc">$</span>SDH, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-373"><a href="#cb12-373" aria-label="349"></a>ing_cp      <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p2[ p42 <span class="sc">==</span> <span class="dv">6</span> ]<span class="sc">$</span>EI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-374"><a href="#cb12-374" aria-label="350"></a></span>
+<span id="cb12-375"><a href="#cb12-375" aria-label="351"></a>med_jefe    <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p3[ p04 <span class="sc">==</span> <span class="dv">1</span> ]<span class="sc">$</span>Imed, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-376"><a href="#cb12-376" aria-label="352"></a>ing_cony    <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p3[ p04 <span class="sc">==</span> <span class="dv">2</span> ]<span class="sc">$</span>EI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-377"><a href="#cb12-377" aria-label="353"></a>sd_cony     <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p3[ p04 <span class="sc">==</span> <span class="dv">2</span> ]<span class="sc">$</span>SDI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-378"><a href="#cb12-378" aria-label="354"></a>ing_hijo    <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p3[ p04 <span class="sc">==</span> <span class="dv">3</span> ]<span class="sc">$</span>EI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-379"><a href="#cb12-379" aria-label="355"></a>sd_hijo     <span class="ot">&lt;-</span> <span class="fu">formatC</span>( tab_p3[ p04 <span class="sc">==</span> <span class="dv">3</span> ]<span class="sc">$</span>SDI, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">format =</span> <span class="st">'f'</span> )</span>
+<span id="cb12-380"><a href="#cb12-380" aria-label="356"></a><span class="in">```</span></span>
+<span id="cb12-381"><a href="#cb12-381" aria-label="357"></a></span>
+<span id="cb12-382"><a href="#cb12-382" aria-label="358"></a><span class="fu">### Interpretación de los hallazgos</span></span>
+<span id="cb12-383"><a href="#cb12-383" aria-label="359"></a></span>
+<span id="cb12-384"><a href="#cb12-384" aria-label="360"></a><span class="ss">1. </span>**Brecha salarial según afiliación a la seguridad social:** Se evidencia una marcada diferencia entre el sector formal y el informal. Los trabajadores sin seguro social (`p05a = 10`) perciben un ingreso promedio de **$`r ing_sin_seg`** (mediana **$`r med_sin_seg`**), valor inferior al salario básico unificado, mientras que los afiliados al IESS Seguro General (`p05a = 1`) alcanzan una media de **$`r ing_iess`** (mediana **$`r med_iess`**), más del doble que el grupo sin afiliación. Asimismo, la alta desviación estándar en el IESS General refleja la presencia de remuneraciones altas que elevan la media por encima de la mediana.</span>
+<span id="cb12-385"><a href="#cb12-385" aria-label="361"></a></span>
+<span id="cb12-386"><a href="#cb12-386" aria-label="362"></a><span class="ss">2. </span>**Estabilidad horaria e ingresos por categoría ocupacional:** Al evaluar la dispersión de la jornada semanal, los empleados públicos (`p42 = 1`) muestran la mayor regularidad contractual, concentrando su trabajo alrededor de las 40 horas semanales con una desviación estándar de apenas **`r sd_hrs_pub` horas**. Por el contrario, los trabajadores por cuenta propia (`p42 = 6`) registran la mayor inestabilidad horaria con una desviación estándar de **`r sd_hrs_cp` horas**, acompañada de un ingreso promedio considerablemente menor (**$`r ing_cp`**).</span>
+<span id="cb12-387"><a href="#cb12-387" aria-label="363"></a></span>
+<span id="cb12-388"><a href="#cb12-388" aria-label="364"></a><span class="ss">3. </span>**Distribución del ingreso según el rol en el hogar:** El análisis por parentesco permite contrastar la robustez de la mediana frente a la media ante valores extremos. Tanto jefes de hogar (`p04 = 1`), cónyuges (`p04 = 2`) e hijos (`p04 = 3`) comparten exactamente la misma mediana de **$`r med_jefe`** (correspondiente al salario básico). Sin embargo, sus medias y dispersiones cambian notablemente: los cónyuges promedian **$`r ing_cony`** con una desviación estándar de **$`r sd_cony`**, frente a una media de **$`r ing_hijo`** ($SD = \$<span class="in">`r sd_hijo`</span>$) en los hijos, reflejando una mayor dispersión salarial en los dos primeros roles familiares.</span>
+<span id="cb12-389"><a href="#cb12-389" aria-label="365"></a></span>
+<span id="cb12-390"><a href="#cb12-390" aria-label="366"></a><span class="ss">4. </span>**Resultados de la pregunta propuesta por el docente:** <span class="co">[</span><span class="ot">Redactar aquí la interpretación de la cuarta pregunta una vez procesada</span><span class="co">]</span>.</span>
+<span id="cb12-391"><a href="#cb12-391" aria-label="367"></a></span>
+<span id="cb12-392"><a href="#cb12-392" aria-label="368"></a><span class="fu">### Referencias bibliográficas</span></span>
+<span id="cb12-393"><a href="#cb12-393" aria-label="369"></a></span>
+<span id="cb12-394"><a href="#cb12-394" aria-label="370"></a><span class="ss">* </span>Instituto Nacional de Estadística y Censos (INEC). (2025). *Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) - Diciembre 2025. Base de datos de personas y diccionario de variables*. Quito, Ecuador: INEC. https://www.ecuadorencifras.gob.ec/</span>
+<span id="cb12-395"><a href="#cb12-395" aria-label="371"></a><span class="ss">* </span>Escuela Politécnica Nacional (EPN). (2026). *Guía del Proyecto Integrador y material de clase de Probabilidad y Estadística (Periodo 2026-B)*. Quito, Ecuador.</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

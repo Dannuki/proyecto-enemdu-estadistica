@@ -4,6 +4,7 @@ subtitle: "Grupo 1"
 author: 
   - "Danny Ponce"
   - "Diego Villagomez"
+  - "Melanie Jumbo"
 date: "2026-11-27"
 format: 
   html:

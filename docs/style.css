@@ -1,0 +1,8 @@
+pre, code, .sourceCode {
+  font-size: 97%;
+}
+
+table, .cell-output-display, img {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}

@@ -1,12 +1,16 @@
 ---
 title: "Proyecto del Primer Bimestre"
-subtitle: "Grupo 1"
-author: 
+subtitle: "Probabilidad y Estadística - Grupo 1 (GR5SI)"
+author:
   - "Danny Ponce"
-  - "Diego Villagomez"
-  - "Melanie Jumbo"
+  - "Diego Villagómez"
   - "Dellys Cholca"
+  - "Melanie Jumbo"
 date: "2026-11-27"
+execute:
+  echo: false
+  warning: false
+  message: false
 format: 
   html:
     theme: default
@@ -19,17 +23,17 @@ format:
     linestretch: 1.5
     fig-cap-location: top
     tbl-cap-location: top
+  docx:
+    number-sections: true
+    fig-width: 6
+    fig-height: 3.2
     html-math-method: mathjax
-    code-link: false
-    code-overflow: wrap
-    code-tools: true
-    code-line-numbers: true
-    code-copy: true
-    code-fold: show
-    grid: 
-      sidebar-width: 300px
-      body-width: 1250px
-      margin-width: 300px
+  pdf:
+    fontsize: 12pt
+    geometry: margin=2.5cm
+    number-sections: true
+    fig-cap-location: top
+    tbl-cap-location: top
 ---
 
 <!------------------------------------------------------------------------------------------------->
@@ -65,8 +69,6 @@ A lo largo del reporte se realiza el procesamiento y análisis de esta informaci
 ### Carga y preparación de la información
 
 ```{r}
-#| warning: false
-#| message: false
 library( data.table )
 library( ggplot2 )
 library( kableExtra )
@@ -77,7 +79,7 @@ enemdu <- read.csv( file, header = TRUE, sep = ";" )
 enemdu <- as.data.table( enemdu )
 ```
 
-Para garantizar la validez de las medidas de tendencia central y dispersión, se filtran los registros correspondientes a personas con ingresos laborales reportados válidos (ingrl > 0 & ingrl < 999999), eliminando así a la población sin ingresos laborales y los códigos especiales de «no informa» (999999) establecidos por el INEC. Asimismo, se asignan etiquetas descriptivas a los códigos numéricos de acuerdo con el diccionario de datos oficial.
+Para garantizar la validez de las medidas de tendencia central y dispersión, se filtran los registros correspondientes a personas con ingresos laborales reportados válidos (`ingrl > 0 & ingrl < 999999`), eliminando así a la población sin ingresos laborales y los códigos especiales de «no informa» (`999999`) establecidos por el INEC. Asimismo, se asignan etiquetas descriptivas a los códigos numéricos de acuerdo con el diccionario de datos oficial.
 
 ```{r}
 # Filtrado de registros válidos de ingreso laboral
@@ -129,6 +131,7 @@ enemdu_clean[ , parentesco_lbl := fcase(
 ```
 
 Tras la limpieza, la muestra efectiva de análisis cuenta con **`r format(nrow(enemdu_clean), big.mark = ",")`** trabajadores con ingresos laborales válidos.
+
 ### Propuesta de preguntas y relevancia
 
 Con el fin de explorar la situación laboral del país desde enfoques distintos a los análisis más habituales, el grupo formuló tres preguntas estadísticas enfocadas en variables socioeconómicas y laborales clave de la encuesta, a las que se suma una cuarta pregunta seleccionada de las propuestas por el docente:
@@ -144,7 +147,7 @@ Con el fin de explorar la situación laboral del país desde enfoques distintos 
 
 4. **[Colocar aquí la pregunta propuesta por el docente]**
    * *Relevancia:* [Colocar aquí la relevancia de la pregunta del docente].
-   
+
 <!------------------------------------------------------------------------------------------------->
 ## Análisis estadístico
 
@@ -168,42 +171,31 @@ setorder( tab_p1, -fn )
 ```
 
 ```{r}
-#| echo: true
 #| results: asis
-#| code-fold: true
 tab_p1[ , list( seguro_lbl, fn, EI, SDI, Imed, EH, SDH, Hmed ) ] %>%
   kable(
-    label = NA,
     caption = 'Resumen estadístico de ingreso laboral (USD) y horas semanales según tipo de seguro social',
     row.names = FALSE,
     col.names = c(
       'Tipo de seguro social',
-      '\\( n \\)',
-      '\\( E[I] \\)',
-      '\\( SD[I] \\)',
-      '\\( I_{med} \\)',
-      '\\( E[H] \\)',
-      '\\( SD[H] \\)',
-      '\\( H_{med} \\)' ),
+      '$n$',
+      '$E[I]$',
+      '$SD[I]$',
+      '$I_{med}$',
+      '$E[H]$',
+      '$SD[H]$',
+      '$H_{med}$' ),
     align = 'lrrrrrrr',
     digits = c( 0, 0, 2, 2, 2, 2, 2, 2 ),
     format.args = list( big.mark = ',', decimal.mark = '.', scientific = FALSE ),
-    escape = FALSE,
-    centering = TRUE
+    escape = FALSE
   ) %>%
-  kable_classic(
-    full_width = FALSE,
-    fixed_thead = TRUE,
-    html_font = "Computer Modern",
-    position = 'center',
-    latex_options = c('hold_position', 'repeat_header', 'scale_down')
-  )
+  kable_styling( latex_options = c('hold_position'), full_width = FALSE )
 ```
 
 ```{r}
-#| echo: true
-#| code-fold: true
-#| fig-cap: "Distribución del ingreso laboral según tipo de seguro social (top 5 categorías más frecuentes)"
+#| fig-cap: "Distribución del ingreso laboral según tipo de seguro social (top 5 categorías; acotado a ingresos ≤ USD 3,000)"
+#| fig-height: 3.3
 top_seguros <- tab_p1[ 1:5 ]$seguro_lbl
 
 ggplot( enemdu_clean[ seguro_lbl %in% top_seguros & ingrl <= 3000 ], 
@@ -211,7 +203,7 @@ ggplot( enemdu_clean[ seguro_lbl %in% top_seguros & ingrl <= 3000 ],
   geom_boxplot( alpha = 0.8, outlier.alpha = 0.2, show.legend = FALSE ) +
   coord_flip() +
   labs( x = "Tipo de seguro social", y = "Ingreso laboral mensual (USD)" ) +
-  theme_minimal( base_size = 11 )
+  theme_minimal( base_size = 10 )
 ```
 
 ### Pregunta 2: Categoría ocupacional vs. Estabilidad de la jornada e ingresos
@@ -230,42 +222,31 @@ setorder( tab_p2, -fn )
 ```
 
 ```{r}
-#| echo: true
 #| results: asis
-#| code-fold: true
 tab_p2[ , list( ocupacion_lbl, fn, EH, SDH, Hmed, EI, SDI, Imed ) ] %>%
   kable(
-    label = NA,
     caption = 'Resumen estadístico de horas semanales e ingreso laboral (USD) según categoría ocupacional',
     row.names = FALSE,
     col.names = c(
       'Categoría ocupacional',
-      '\\( n \\)',
-      '\\( E[H] \\)',
-      '\\( SD[H] \\)',
-      '\\( H_{med} \\)',
-      '\\( E[I] \\)',
-      '\\( SD[I] \\)',
-      '\\( I_{med} \\)' ),
+      '$n$',
+      '$E[H]$',
+      '$SD[H]$',
+      '$H_{med}$',
+      '$E[I]$',
+      '$SD[I]$',
+      '$I_{med}$' ),
     align = 'lrrrrrrr',
     digits = c( 0, 0, 2, 2, 2, 2, 2, 2 ),
     format.args = list( big.mark = ',', decimal.mark = '.', scientific = FALSE ),
-    escape = FALSE,
-    centering = TRUE
+    escape = FALSE
   ) %>%
-  kable_classic(
-    full_width = FALSE,
-    fixed_thead = TRUE,
-    html_font = "Computer Modern",
-    position = 'center',
-    latex_options = c('hold_position', 'repeat_header', 'scale_down')
-  )
+  kable_styling( latex_options = c('hold_position'), full_width = FALSE )
 ```
 
 ```{r}
-#| echo: true
-#| code-fold: true
 #| fig-cap: "Dispersión de horas trabajadas a la semana por categoría ocupacional (categorías principales)"
+#| fig-height: 3.3
 top_ocup <- tab_p2[ 1:6 ]$ocupacion_lbl
 
 ggplot( enemdu_clean[ ocupacion_lbl %in% top_ocup ], 
@@ -273,7 +254,7 @@ ggplot( enemdu_clean[ ocupacion_lbl %in% top_ocup ],
   geom_boxplot( alpha = 0.8, outlier.alpha = 0.2, show.legend = FALSE ) +
   coord_flip() +
   labs( x = "Categoría ocupacional", y = "Horas trabajadas la semana anterior" ) +
-  theme_minimal( base_size = 11 )
+  theme_minimal( base_size = 10 )
 ```
 
 ### Pregunta 3: Rol en el hogar (parentesco) vs. Ingreso laboral
@@ -289,39 +270,28 @@ setorder( tab_p3, -fn )
 ```
 
 ```{r}
-#| echo: true
 #| results: asis
-#| code-fold: true
 tab_p3[ , list( parentesco_lbl, fn, EI, SDI, Imed ) ] %>%
   kable(
-    label = NA,
     caption = 'Resumen estadístico del ingreso laboral mensual (USD) según parentesco con el jefe de hogar',
     row.names = FALSE,
     col.names = c(
       'Parentesco con jefe de hogar',
-      '\\( n \\)',
-      '\\( E[I] \\)',
-      '\\( SD[I] \\)',
-      '\\( I_{med} \\)' ),
+      '$n$',
+      '$E[I]$',
+      '$SD[I]$',
+      '$I_{med}$' ),
     align = 'lrrrr',
     digits = c( 0, 0, 2, 2, 2 ),
     format.args = list( big.mark = ',', decimal.mark = '.', scientific = FALSE ),
-    escape = FALSE,
-    centering = TRUE
+    escape = FALSE
   ) %>%
-  kable_classic(
-    full_width = FALSE,
-    fixed_thead = TRUE,
-    html_font = "Computer Modern",
-    position = 'center',
-    latex_options = c('hold_position', 'repeat_header', 'scale_down')
-  )
+  kable_styling( latex_options = c('hold_position'), full_width = FALSE )
 ```
 
 ```{r}
-#| echo: true
-#| code-fold: true
 #| fig-cap: "Comparación entre media y mediana del ingreso laboral según parentesco (top 5 roles)"
+#| fig-height: 3.3
 top_par <- tab_p3[ 1:5 ]
 tab_p3_long <- melt( top_par, id.vars = "parentesco_lbl", measure.vars = c( "EI", "Imed" ),
                      variable.name = "Medida", value.name = "Valor" )
@@ -331,16 +301,18 @@ ggplot( tab_p3_long, aes( x = reorder( parentesco_lbl, Valor ), y = Valor, fill 
   geom_col( position = "dodge", width = 0.7 ) +
   coord_flip() +
   labs( x = "Parentesco con el jefe de hogar", y = "Ingreso laboral (USD)", fill = "Estadístico" ) +
-  theme_minimal( base_size = 11 ) +
+  theme_minimal( base_size = 10 ) +
   theme( legend.position = "bottom" )
 ```
+
+### Pregunta 4: [Título de la pregunta propuesta por el docente]
+
+[Agregar aquí el bloque de código en R, tabla y gráfico de la cuarta pregunta una vez seleccionada].
 
 <!------------------------------------------------------------------------------------------------->
 ## Resultados
 
 ```{r}
-#| echo: false
-# Variables en línea para citar automáticamente en los resultados
 ing_sin_seg <- formatC( tab_p1[ p05a == 10 ]$EI, digits = 2, format = 'f' )
 med_sin_seg <- formatC( tab_p1[ p05a == 10 ]$Imed, digits = 2, format = 'f' )
 ing_iess    <- formatC( tab_p1[ p05a == 1 ]$EI, digits = 2, format = 'f' )
@@ -363,12 +335,10 @@ sd_hijo     <- formatC( tab_p3[ p04 == 3 ]$SDI, digits = 2, format = 'f' )
 
 2. **Estabilidad horaria e ingresos por categoría ocupacional:** Al evaluar la dispersión de la jornada semanal, los empleados públicos (`p42 = 1`) muestran la mayor regularidad contractual, concentrando su trabajo alrededor de las 40 horas semanales con una desviación estándar de apenas **`r sd_hrs_pub` horas**. Por el contrario, los trabajadores por cuenta propia (`p42 = 6`) registran la mayor inestabilidad horaria con una desviación estándar de **`r sd_hrs_cp` horas**, acompañada de un ingreso promedio considerablemente menor (**$`r ing_cp`**).
 
-3. **Distribución del ingreso según el rol en el hogar:** El análisis por parentesco permite contrastar la robustez de la mediana frente a la media ante valores extremos. Tanto jefes de hogar (`p04 = 1`), cónyuges (`p04 = 2`) e hijos (`p04 = 3`) comparten exactamente la misma mediana de **$`r med_jefe`** (correspondiente al salario básico). Sin embargo, sus medias y dispersiones cambian notablemente: los cónyuges promedian **$`r ing_cony`** con una desviación estándar de **$`r sd_cony`**, frente a una media de **$`r ing_hijo`** ($SD = \$`r sd_hijo`$) en los hijos, reflejando una mayor dispersión salarial en los dos primeros roles familiares.
+3. **Distribución del ingreso según el rol en el hogar:** El análisis por parentesco permite contrastar la robustez de la mediana frente a la media ante valores extremos. Tanto jefes de hogar (`p04 = 1`), cónyuges (`p04 = 2`) e hijos (`p04 = 3`) comparten exactamente la misma mediana de **$`r med_jefe`** (correspondiente al salario básico). Sin embargo, sus medias y dispersiones cambian notablemente: los cónyuges promedian **$`r ing_cony`** con una desviación estándar de **$`r sd_cony`**, frente a una media de **$`r ing_hijo`** (desviación estándar de **$`r sd_hijo`**) en los hijos, reflejando una mayor dispersión salarial en los dos primeros roles familiares.
 
 4. **Resultados de la pregunta propuesta por el docente:** [Redactar aquí la interpretación de la cuarta pregunta una vez procesada].
 
 ### Referencias bibliográficas
 
-* Instituto Nacional de Estadística y Censos (INEC). (2025). *Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) - Diciembre 2025. Base de datos de personas y diccionario de variables*. Quito, Ecuador: INEC. https://www.ecuadorencifras.gob.ec/
-* Escuela Politécnica Nacional (EPN). (2026). *Guía del Proyecto Integrador y material de clase de Probabilidad y Estadística (Periodo 2026-B)*. Quito, Ecuador.
-
+* Instituto Nacional de Estadística y Censos (INEC). (2025). *Encuesta Nacional de Empleo, Desempleo y Subempleo (ENEMDU) - Diciembre 2025. Base de datos de personas y diccionario de variables*. Quito, Ecuador: INEC. [https://www.ecuadorencifras.gob.ec/](https://www.ecuadorencifras.gob.ec/)
